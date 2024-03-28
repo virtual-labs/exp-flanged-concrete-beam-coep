@@ -1,39 +1,69 @@
-{
+
+ {
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Which of the following is a requirement for a slab intended to serve as the compression flange of a T-beam or L-beam?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+         "a": "The slab should be detached from the web ",
+        "b": "The slab must be cast together with the web or securely bonded to it ",
+        "c": "The slab should have minimal reinforcement  ",
+        "d": "The slab must have a separate support system "
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
+      
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "When the primary reinforcement of the slab runs parallel to the beam in a T-beam or L-beam configuration, what percentage of additional transverse reinforcement is typically required?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "20%  ",
+        "b": "40%  ",
+        "c": "60%  ",
+        "d": "80% "
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+     
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "In T beam design, when the neutral axis resides within the flange (Case 1), how is the T beam typically analyzed?",
+      "answers": {
+        "a": "As a circular beam  ",
+        "b": "As a trapezoidal beam  ",
+        "c": "As a rectangular beam  ",
+        "d": "As a triangular beam"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "In Case 2 of T beam analysis, where the neutral axis is positioned below the flange and the flange thickness is sufficiently small, what is the maximum stress value reached within the concrete slab?",
+      "answers": {
+        "a": "0.001fck  ",
+        "b": "0.002fck  ",
+        "c": "0.003fck  ",
+        "d": "0.004fck"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "In Case 3 of T beam analysis, where the neutral axis lies beneath the flange and the strain at the bottom of the slab remains below 0.002, what condition leads to non-linear stress distribution within the flange?",
+      "answers": {
+        "a": "Df/d ratio exceeding 0.1  ",
+        "b": "Df/d ratio exceeding 0.2  ",
+        "c": "Df/d ratio less than 0.1  ",
+        "d": "Df/d ratio less than 0.2 "
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
     }
+	
+
+  
   ]
 }

@@ -2,38 +2,67 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "In a flanged beam system where a reinforced concrete slab sits atop a reinforced concrete beam, which component primarily bears compression forces?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+         "a": "Reinforced concrete beam",
+        "b": "Reinforced concrete slab",
+        "c": "Steel in the beam",
+        "d": "None of the above"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
+      
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What is the primary function of steel in a flanged beam configuration?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Handling compression forces ",
+        "b": "Distributing shear forces ",
+        "c": "Bearing tension forces  ",
+        "d": "Providing insulation properties "
+   
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+     
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "In continuous T or L beams, where does flanged beam behavior primarily occur?",
+      "answers": {
+        "a": "Between supports  ",
+        "b": "Over the supports  ",
+        "c": "At the mid-span  ",
+        "d": "Along the entire length  "
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "In which part of the continuous T or L beams do slabs primarily experience tension forces?",
+      "answers": {
+        "a": "Between supports  ",
+        "b": "Over the supports  ",
+        "c": "At the mid-span  ",
+        "d": "Along the entire length  "
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the purpose of positioning transverse steel atop the slab in continuous T or L beams?",
+      "answers": {
+        "a": "To handle compression forces  ",
+        "b": "To mitigate shear stresses  ",
+        "c": "To increase beam flexibility  ",
+        "d": "To decrease slab thickness  "
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
     }
+  
   ]
 }
