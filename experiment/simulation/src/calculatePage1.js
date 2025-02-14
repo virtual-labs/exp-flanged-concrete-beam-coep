@@ -12,76 +12,85 @@ var xuVal=0;
 
 function calculateLength(){
 	
-	console.log("length of beam "+beamSpanVal);
+	$("#forwardButton").addClass("disabled");
+    $('#backwardButton').addClass("disabled");
+    
 	var htm1= ''
-	              +'<div class = "row ">'
-	              +'<div class="col-sm-1">'
-                  +'</div>'
-                  +'<div class="col-sm-3 marginBottom" id="nomCover">'
-                  +' <center><label class="labelstyle " > nominal cover : '+nominalCoverVal+' (mm)  </label></center> '
-                  +'</div>'
+//	              +'<div class = "row ">'
+//	              +'<div class="col-sm-1">'
+//                  +'</div>'
+//                  +'<div class="col-sm-3 marginBottom" id="nomCover">'
+//                  +' <center><label class="labelstyle " > nominal cover : '+nominalCoverVal+' (mm)  </label></center> '
+//                  +'</div>'
+////                  +'<div class="col-sm-1">'
+////                  +'</div>'
+//                  +'<div class="col-sm-3 marginBottom" id="spanLabel">'
+//                  +' <center><label class="labelstyle " >L<sub>0</sub> : '+beamSpanVal+' (m)</label></center> '
+//                  +'</div>' 
+//                  
+//                  +'<div class="col-sm-3 marginBottom" id="longReinLabel">'
+//                  +' <center><label class="labelstyle " > &empty; : '+longReinVal+' (mm)</label></center> '
+//                  +'</div>'
+//                  
 //                  +'<div class="col-sm-1">'
 //                  +'</div>'
-                  +'<div class="col-sm-3 marginBottom" id="spanLabel">'
-                  +' <center><label class="labelstyle " >L<sub>0</sub> : '+beamSpanVal+' (m)</label></center> '
-                  +'</div>' 
-                  
-                  +'<div class="col-sm-3 marginBottom" id="longReinLabel">'
-                  +' <center><label class="labelstyle " > &empty; : '+longReinVal+' (mm)</label></center> '
-                  +'</div>'
-                  
-                  +'<div class="col-sm-1">'
-                  +'</div>'
-                  +'</div>' 
-                  
-                  
-                  +'<div class = "row">'
-	              +'<div class="col-sm-1">'
-                  +'</div>'
-                  +'<div class="col-sm-3 marginBottom" id="shearLabel">'
-                  +' <center><label class="labelstyle " > &empty;<sub>s</sub> : '+shearReinVal+' (mm)  </label></center> '
-                  +'</div>'
-                  +'<div class="col-sm-3 marginBottom" id="w1Label">'
-                  +' <center><label class="labelstyle " >w1 : '+w1WidthVal+' (m)</label></center> '
-                  +'</div>'
-                  +'<div class="col-sm-3 marginBottom" id="w2Label">'
-                  +' <center><label class="labelstyle " >w2 : '+w2WidthVal+' (m)</label></center> '
-                  +'</div>' 
-                  +'<div class="col-sm-1">'
-                  +'</div>'
-                  +'</div>' 
-                        
-	   
-	              +'<div class = "row">'
-	              +'<div class="col-sm-1">'
-                  +'</div>'
-                  +'<div class="col-sm-3 marginBottom" id="shearLabel">'
-                  +' <center><label class="labelstyle " > b<sub>f</sub> : '+bfVal+'   </label></center> '
-                  +'</div>'
-                  +'<div class="col-sm-3 marginBottom" id="w1Label">'
-                  +' <center><label class="labelstyle " >D : '+totDepth+' </label></center> '
-                  +'</div>'
-                  +'<div class="col-sm-3 marginBottom" id="w1Label">'
-                  +' <center><label class="labelstyle " >f<sub>ck</sub> : '+conVal+' Mpa </label></center> '
-                  +'</div>'
-                  
-                  +'<div class="col-sm-1">'
-                  +'</div>'
-                  +'</div>' 
+//                  +'</div>' 
+//                  
+//                  
+//                  +'<div class = "row">'
+//	              +'<div class="col-sm-1">'
+//                  +'</div>'
+//                  +'<div class="col-sm-3 marginBottom" id="shearLabel">'
+//                  +' <center><label class="labelstyle " > &empty;<sub>s</sub> : '+shearReinVal+' (mm)  </label></center> '
+//                  +'</div>'
+//                  +'<div class="col-sm-3 marginBottom" id="w1Label">'
+//                  +' <center><label class="labelstyle " >w1 : '+w1WidthVal+' (m)</label></center> '
+//                  +'</div>'
+//                  +'<div class="col-sm-3 marginBottom" id="w2Label">'
+//                  +' <center><label class="labelstyle " >w2 : '+w2WidthVal+' (m)</label></center> '
+//                  +'</div>' 
+//                  +'<div class="col-sm-1">'
+//                  +'</div>'
+//                  +'</div>' 
+//                        
+//	   
+//	              +'<div class = "row">'
+//	              +'<div class="col-sm-1">'
+//                  +'</div>'
+//                  +'<div class="col-sm-3 marginBottom" id="shearLabel">'
+//                  +' <center><label class="labelstyle " > b<sub>f</sub> : '+bfVal+'   </label></center> '
+//                  +'</div>'
+//                  +'<div class="col-sm-3 marginBottom" id="w1Label">'
+//                  +' <center><label class="labelstyle " >D : '+totDepth+' </label></center> '
+//                  +'</div>'
+//                  +'<div class="col-sm-3 marginBottom" id="w1Label">'
+//                  +' <center><label class="labelstyle " >f<sub>ck</sub> : '+conVal+' Mpa </label></center> '
+//                  +'</div>'
+//                  
+//                  +'<div class="col-sm-1">'
+//                  +'</div>'
+//                  +'</div>' 
 	   
 	     
 	   +'<div class=" row  " id="eCover">'
 	   +'<div class="col-sm-5">'
 	   +'<label class="labelstyle marginBottom" style="font-size:16px;margin:15px 10px ;">Calculate effective cover d<sup>'+"'"+'</sup>(mm) :  </label>'
 	   +'</div>'
-	   +'<div class="col-sm-3">'
+	   +'<div class="col-sm-2">'
 	   +'<input type="number"  style= "width:100%;margin-top:10px;margin-left:15px;"  class=" form-control" id="text1">'
 	   +'</div>'
-	   +'<div class="col-sm-2">'
-	   +'<button type="submit" class="btn btn-info"  id="refClause1" data-toggle="modal" data-target="#myModal1" style="width:100%;margin-top: 10px;" >Refer</input>'
+	   +'<div class="col-sm-1">'
+//	   +'<button type="submit" class="btn btn-info"  id="refClause1" data-toggle="modal" data-target="#myModal1" style="width:100%;margin-top: 10px;" >Refer</button>'
+	   +'<i class="fa fa-info-circle fafaInfoGreen" style="padding: 15px;" title="Refer Values"  id="refClause1" data-toggle="modal" data-target="#myModal" ></i>'
+
 	   +'</div>'
 	   +'<div class="col-sm-2">'
-	   +'<button type="submit" class="btn btn-danger"  id="submit_load1" data-toggle="modal" data-target="#myModal" style="width:100%;margin-top: 10px;" >Submit</input>'
+	   +'<button type="submit" class="btn btn-info"  id="refClause1Pdf" data-toggle="modal" data-target="#myModal1" style="width:100%;margin-top: 10px;" >Refer</button>'
+	    +'</div>'
+	   
+	   +'<div class="col-sm-2">'
+	   +'<button type="submit" class="btn btn-danger"  id="submit_load1" data-toggle="modal" data-target="#myModal" style="width:100%;margin-top: 10px;" >Submit</button>'
+	  
 	   +'</div>'	    
 	   +'</div>'
 	   
@@ -99,9 +108,14 @@ function calculateLength(){
 				   +'<div class="col-sm-5 ">'
 				   +'<label  id="enterLoad"  class="" style="font-size:16px;margin:15px 10px ;">Calculate Factored load w<sub>u</sub> (kN/m) :  </label>'
 				   +'</div>'
-				   +'<div class="col-sm-4" id="valueStep1">'
+				   +'<div class="col-sm-3" id="valueStep1">'
 				   +'<input type="number"  value="" id="text2"  style=margin:15px 10px;width:150%;height:50%;" class=" form-control" />'
 				   +'</div>'
+				   
+				    +'<div class="col-sm-1" id="valueStep1">'
+				   +'<i class="fa fa-info-circle fafaInfoGreen"  title="Refer Values" style="margin-top:15px;" id="refLoad" data-toggle="modal" data-target="#myModal" ></i>'
+				   +'</div>'
+				   
 				   +'<div class="col-sm-3"  id="submitStep1">'
 				   +'<button type="submit" class="btn btn-danger"  id="submit_load2" data-toggle="modal" data-target="#myModal" style="width:100%;margin-top: 16px;" >Submit</input>'
 				   +'</div>'
@@ -112,14 +126,23 @@ function calculateLength(){
 				   +'<div class="col-sm-5 ">'
 				   +'<label  id="enterLoad"  class="" style="font-size:16px;margin:15px 10px ;">Calculate effective span L<sub>eff</sub> (m):  </label>'
 				   +'</div>'
-				   +'<div class="col-sm-3" id="valueStep1">'
+				   +'<div class="col-sm-2" id="valueStep1">'
 				   +'<input type="number"  value="" id="text3"  style=margin:15px 10px;width:150%;height:50%;" class=" form-control" />'
 				   +'</div>'
+				   
+				   
+				    +'<div class="col-sm-1">'
+			//	   +'<button type="submit" class="btn btn-info"  id="refClause1" data-toggle="modal" data-target="#myModal1" style="width:100%;margin-top: 10px;" >Refer</button>'
+				   +'<i class="fa fa-info-circle fafaInfoGreen" style="padding: 15px;" title="Refer Values"  id="refClause11" data-toggle="modal" data-target="#myModal" ></i>'
+			
+				   +'</div>'
 				   +'<div class="col-sm-2">'
-	               +'<button type="submit" class="btn btn-info"  id="refClause11" data-toggle="modal" data-target="#myModal1" style="width:100%;margin-top: 10px;" >Refer</input>'
-	               +'</div>'
+				   +'<button type="submit" class="btn btn-info"  id="refClause11Pdf" data-toggle="modal" data-target="#myModal1" style="width:100%;margin-top: 14px;" >Refer</button>'
+				    +'</div>'
+				 
+	               
 				   +'<div class="col-sm-2"  id="submitStep1">'
-				   +'<button type="submit" class="btn btn-danger"  id="submit_load3" data-toggle="modal" data-target="#myModal" style="width:100%;margin-top: 16px;" >Submit</input>'
+				   +'<button type="submit" class="btn btn-danger"  id="submit_load3" data-toggle="modal" data-target="#myModal" style="width:100%;margin-top: 15px;" >Submit</input>'
 				   +'</div>'
 				   +'</div>'
 				   
@@ -138,8 +161,11 @@ function calculateLength(){
 				   +'<div class="col-sm-5 ">'
 				   +'<label  id="enterLoad"  class="" style="font-size:16px;margin:15px 10px ;">Calculate ultimate Shear force V<sub>u</sub> (kN) :  </label>'
 				   +'</div>'
-				   +'<div class="col-sm-4" id="valueStep1">'
+				   +'<div class="col-sm-3" id="valueStep1">'
 				   +'<input type="number"  value="" id="text4"  style=margin:15px 10px;width:150%;height:50%;" class=" form-control" />'
+				   +'</div>'
+				    +'<div class="col-sm-1" id="valueStep1">'
+				   +'<i class="fa fa-info-circle fafaInfoGreen"  title="Refer Values" style="margin-top:15px;" id="shearValues" data-toggle="modal" data-target="#myModal" ></i>'
 				   +'</div>'
 				   +'<div class="col-sm-3"  id="submitStep1">'
 				   +'<button type="submit" class="btn btn-danger"  id="submit_load4" data-toggle="modal" data-target="#myModal" style="width:100%;margin-top: 16px;" >Submit</input>'
@@ -162,9 +188,14 @@ function calculateLength(){
 				   +'<div class="col-sm-5 ">'
 				   +'<label  id="enterLoad"  class="" style="font-size:16px;margin:15px 10px ;">Calculate x<sub>u</sub> (mm) :  </label>'
 				   +'</div>'
-				   +'<div class="col-sm-4" id="valueStep1">'
+				   +'<div class="col-sm-3" id="valueStep1">'
 				   +'<input type="number"  value="" id="xuVal"  style=margin:15px 10px;width:150%;height:50%;" class=" form-control" />'
 				   +'</div>'
+				   
+				    +'<div class="col-sm-1" id="valueStep1">'
+				   +'<i class="fa fa-info-circle fafaInfoGreen"  title="Refer Values" style="margin-top:15px;" id="xuValueCal" data-toggle="modal" data-target="#myModal" ></i>'
+				   +'</div>'
+				   
 				   +'<div class="col-sm-3"  id="submitStep1">'
 				   +'<button type="submit" class="btn btn-danger"  id="submit_load55" data-toggle="modal" data-target="#myModal" style="width:100%;margin-top: 16px;" >Submit</input>'
 				   +'</div>'
@@ -190,7 +221,7 @@ function calculateLength(){
 		var w1Div;
 		var w2Div;
 		
-		var beamSpanVal1;
+		
 		var effspanEnter;
 		var id=1;
 		
@@ -203,16 +234,84 @@ function calculateLength(){
 //			toastr.error("Refer clause no 22.2");
 		});
 		
-		$("#refClause1").click(function(){
-	var ht = '<iframe src="images/plain-and-reinforced-concrete.pdf#page=48"  width="100%;" height="600px;" ></iframe>'
-	$("#MsgModal").html(ht);
+		
+		
+		$("#xuValueCal").click(function(){
+				
+				$(".modal-header").html("Refer Values");
+			$(".modal-header").css("background","rgba(78, 109, 114, 1)");
+			$(".modal-header").css("color","#fff");
+			$("#btnModal").removeClass("btn-success").addClass("btn-danger");
+			$("#MsgModal").html("<b>f<sub>ck</sub> = "+conVal +" Mpa <br> b<sub>f</sub> = "+bfVal+" mm<br> d = D - d"+"'"+"<br> where, <br> D = "+totDepth+"</b>" );
+				
 		});
+		
+		
+		$("#refClause1").click(function(){
+				
+				$(".modal-header").html("Refer Values");
+			$(".modal-header").css("background","rgba(78, 109, 114, 1)");
+			$(".modal-header").css("color","#fff");
+			$("#btnModal").removeClass("btn-success").addClass("btn-danger");
+			$("#MsgModal").html("<b>nominal cover : "+nominalCoverVal+" mm <br>  &empty; : "+longReinVal+" mm <br> &empty;<sub>s</sub> : "+shearReinVal+" mm</b>");
+				
+		});
+		
+		
+		
+		$("#refLoad").click(function(){
+				
+				$(".modal-header").html("Refer Values");
+			$(".modal-header").css("background","rgba(78, 109, 114, 1)");
+			$(".modal-header").css("color","#fff");
+			$("#btnModal").removeClass("btn-success").addClass("btn-danger");
+			$("#MsgModal").html("<b> Magnitude of Load w<sub>u</sub> = "+loadMagVal+" m</b>");
+				
+		});
+		
+		
+		
+		$("#shearValues").click(function(){
+				
+				$(".modal-header").html("Refer Values");
+			$(".modal-header").css("background","rgba(78, 109, 114, 1)");
+			$(".modal-header").css("color","#fff");
+			$("#btnModal").removeClass("btn-success").addClass("btn-danger");
+			$("#MsgModal").html("<b> factored load L<sub>0</sub> = "+beamSpanVal+" m</b>");
+				
+		});
+		
+		
+		$("#refClause1Pdf").click(function(){
+			     var ht = '<iframe src="images/plain-and-reinforced-concrete.pdf#page=48"  width="100%;" height="600px;" ></iframe>'
+//   var ht = "Hello";
+//	var ht = '<iframe src="images/plain-and-reinforced-concrete.pdf #page=48 "  width="100%;" height="600px;" ></iframe>'
+	$(".modal-header").css('background-color', '#45898680');
+	$(".modal-header").html("Reference");
+	$("#MsgModal1").html(ht);
+				});
+		
 		
 		$("#refClause11").click(function(){
-	var ht = '<iframe src="images/plain-and-reinforced-concrete.pdf#page=35"  width="100%;" height="600px;" ></iframe>'
-	$("#MsgModal").html(ht);
+			
+			$(".modal-header").html("Refer Values");
+			$(".modal-header").css("background","rgba(78, 109, 114, 1)");
+			$(".modal-header").css("color","#fff");
+			$("#btnModal").removeClass("btn-success").addClass("btn-danger");
+			$("#MsgModal").html("<b>L<sub>0</sub> = "+beamSpanVal+" m <br> w<sub>1</sub> = "+w1WidthVal+" m <br> w<sub>2</sub> = "+w1WidthVal+" m </b> ");
+			
 		});
 		
+		$("#refClause11Pdf").click(function(){
+		   
+		   	var ht = '<iframe src="images/plain-and-reinforced-concrete.pdf#page=35"  width="100%;" height="600px;" ></iframe>'
+
+$(".modal-header").css('background-color', '#45898680');
+	$(".modal-header").html("Reference");
+	$("#MsgModal1").html(ht);
+		   
+		   
+		});
 		
 		$("#submit_load1").click(function(){
 			if($("#text1").val() == '')
@@ -552,7 +651,7 @@ $("#submit_load5").click(function(){
 //	         $("#bendingM").prop("hidden",false);
              $("#xValCal").prop("hidden",false);
              $("#page3Div2").html('');
-             
+              autoScroll();
 	         bendingMomentFinal();
 	          $("#forwardButton").removeClass("disabled");
              $('#backwardButton').removeClass("disabled");
@@ -584,7 +683,7 @@ $("#submit_load5").click(function(){
 //	         $("#bendingM").prop("hidden",false);
               
              $("#page3Div2").html('');
-            
+            autoScroll();
 	         bendingMomentFinal();
 	         $("#forwardButton").removeClass("disabled");
              $('#backwardButton').removeClass("disabled");
@@ -609,6 +708,7 @@ var xuValEnter;
  $("#submit_load55").click(function(){ 
 	xuValEnter = $("#xuVal").val();
 	xuCalculate();
+//	xuVal = 600;
 	
 	if(xuValEnter == ""){
 			
@@ -700,8 +800,8 @@ function xuCalculate(){
 	var xuVal22 = ((bsub+actRoot)/denoMul).toFixed(2);
 	xuVal2= parseFloat(xuVal22);
 	
-	console.log("xuVal1 : "+xuVal1);
-	console.log("xuVal2 : "+xuVal2);
+//	console.log("xuVal1 : "+xuVal1);
+//	console.log("xuVal2 : "+xuVal2);
 	
 	if(xuVal2>xuVal1){
 		xuVal = xuVal1;
@@ -771,4 +871,9 @@ function blinker1()
         
     } 
 	setTimeout('blinker1()', 1000);
+}
+
+
+function autoScroll() {
+    $("html, body").animate({ scrollTop: $(document).height() }, 1000); // Scroll to bottom in 5 sec
 }

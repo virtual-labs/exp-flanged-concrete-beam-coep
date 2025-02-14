@@ -38,6 +38,7 @@
     text-align: center;
     border-radius: 10px;
     font-weight: 600;
+    padding-left: 10px; /* Add padding to shift the text */
 }
 
 #msgBox{
@@ -63,10 +64,35 @@ hr.new3 {
     font-size: 15px;
 }  
 
+.fafaInfoGreen{
+font-size: 24px;
+    padding: 3px;
+    color: green;
+    cursor: pointer;
+}
+
+.fafaInfoRed{
+font-size: 24px;
+    padding: 3px;
+    color: red;
+    cursor: pointer;
+}
+
+
+
+.fafaInfoValues{
+font-size: 24px;
+    padding: 3px;
+    color: #3c1c1c;
+    cursor: pointer;
+}
+
+
+
 #labelSelected,#shearFactor,#factorLoad,#bendingMoment,#shearFactorReaction,#effectiveDepth,#effectiveSpan,#diaBar,#diaFors,#clearC
 ,#overAllDepth,#astBlock,#eCover,#factoredLoad,#shearF,#bendingM,#overAllDepthSelect,#calculatedAst,#overAllDepthSelectSecond,#steelGrade2,#inputsteelRate
 ,#concreteGrade2,#inputconcreteRate,#overAllDepthSelect1,#calculatedAst1,#noOfBars,#sizeOfBars,#barNos,#sForceCritical,#sForceStress,#sForceStrength,#sMaxShearStress
-,#deffCalculate1,#condition1,#steelGradeStirrups,#steelGradeStirrups3,#vcCalculate,#condition2,#xValCal
+,#deffCalculate1,#condition1,#steelGradeStirrups,#steelGradeStirrups3,#vcCalculate,#condition2,#xValCal,#yfCalculate,#cuCalculate,#astCal,#tuValCal
 {
 			background-color:#7dafad80;
 /* 			#b4e4e280; */

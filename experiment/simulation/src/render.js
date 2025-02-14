@@ -253,9 +253,9 @@ var width = $(window).width();
 
  
 //		t4 = paper.text(x+250,y+28,"w  : "+loadMagVal+"kN/m").attr({'font-weight': 'bold','font-size':'18px','stroke':'#f20515'});
-        t4 = paper.text(x+230,y+28,"w").attr({'font-weight': 'bold','font-size':'16px','stroke':'#f20515'});
-    tr4 = paper.text(x+240,y+33,"u ").attr({'font-weight': 'bold','font-size':'10px','stroke':'#f20515'});
-    tr41 = paper.text(x+280,y+28," : "+loadMagVal+" kN/m").attr({'font-weight': 'bold','font-size':'16px','stroke':'#f20515'});
+//        t4 = paper.text(x+230,y+28,"w").attr({'font-weight': 'bold','font-size':'16px','stroke':'#f20515'});
+//    tr4 = paper.text(x+240,y+33," ").attr({'font-weight': 'bold','font-size':'10px','stroke':'#f20515'});
+//    tr41 = paper.text(x+280,y+28," : "+loadMagVal+" kN/m").attr({'font-weight': 'bold','font-size':'16px','stroke':'#f20515'});
 
 
 //	} 
@@ -272,12 +272,12 @@ var width = $(window).width();
 
 //    function updateLoadMag(){
 //			t4.remove();
-		loadMagVal = $("#loadMag").val();
+//		loadMagVal = $("#loadMag").val();
 //	t4 = paper.text(x+250,y+28,"wu  : "+loadMagVal+"kN/m").attr({'font-weight': 'bold','font-size':'18px','stroke':'#f20515'});
 
 	t4 = paper.text(x+230,y+28,"w").attr({'font-weight': 'bold','font-size':'16px','stroke':'#f20515'});
-    tr4 = paper.text(x+240,y+33,"u ").attr({'font-weight': 'bold','font-size':'10px','stroke':'#f20515'});
-    tr41 = paper.text(x+280,y+28," : "+loadMagVal+" kN/m").attr({'font-weight': 'bold','font-size':'16px','stroke':'#f20515'});
+//    tr4 = paper.text(x+240,y+33," ").attr({'font-weight': 'bold','font-size':'10px','stroke':'#f20515'});
+//    tr41 = paper.text(x+280,y+28," : "+loadMagVal+" kN/m").attr({'font-weight': 'bold','font-size':'16px','stroke':'#f20515'});
 
 //}
  
