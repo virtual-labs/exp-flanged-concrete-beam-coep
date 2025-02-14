@@ -156,7 +156,7 @@ var width = $(window).width();
    var l18 = paper.path("M"+(x+387)+" "+(y+82)+"l 7 -7 l -14 0 z").attr({'stroke':'#000','stroke-width': 2,'fill':'#000'});
     
     var t4 = paper.text(x+250,y+28,"w ").attr({'font-weight': 'bold','font-size':'18px','stroke':'#f20515'});
-	var t5 = paper.text(x+261,y+32,"u ").attr({'font-weight': 'bold','font-size':'12px','stroke':'#f20515'});
+	var t5 = paper.text(x+261,y+32," ").attr({'font-weight': 'bold','font-size':'12px','stroke':'#f20515'});
 
 	
 	function change(){
@@ -244,30 +244,37 @@ var width = $(window).width();
  
 
 		t4 = paper.text(x+210,y+28,"w "+loadMagVal+"kN/m").attr({'font-weight': 'bold','font-size':'18px','stroke':'#f20515'});
-		 t5 = paper.text(x+220,y+32,"u ").attr({'font-weight': 'bold','font-size':'12px','stroke':'#f20515'});
+		 t5 = paper.text(x+220,y+32," ").attr({'font-weight': 'bold','font-size':'12px','stroke':'#f20515'});
 		 t66 = paper.text(x+271,y+28," : "+loadMagVal+" kN/m").attr({'font-weight': 'bold','font-size':'18px','stroke':'#f20515'});
 
 	} 
 	
 	
 	function updateBeamSpanVal(){
+	
 		textl0.remove();
 		beamSpanVal = $("#beamSpan").val();
+		beamSpanVal = parseFloat(beamSpanVal);
+		if(beamSpanVal>10 ||beamSpanVal<=0){
+			blinker();
+			toastr.error('<span class=" blinking1 ">Enter value of clear span in between 1 m to 10 m</span>');
+		
+		}else{
 		textl0 = paper.text(z-90,y+193,"Lo : "+beamSpanVal+" m").attr({'font-weight': 'bold','font-size':'18px','stroke':'#f20515'});
-
+        }
 	}
 
 var t66 = paper.text(x+270,y+28," ");
-    function updateLoadMag(){
-			t4.remove();
-			t5.remove();
-			t66.remove();
-		loadMagVal = $("#loadMag").val();
-         t4 = paper.text(x+210,y+28,"w ").attr({'font-weight': 'bold','font-size':'18px','stroke':'#f20515'});
-		 t5 = paper.text(x+220,y+32,"u ").attr({'font-weight': 'bold','font-size':'12px','stroke':'#f20515'});
-		 t66 = paper.text(x+270,y+28," : "+loadMagVal+" kN/m").attr({'font-weight': 'bold','font-size':'18px','stroke':'#f20515'});
-
-}
+//    function updateLoadMag(){
+//			t4.remove();
+//			t5.remove();
+//			t66.remove();
+//		loadMagVal = $("#loadMag").val();
+//         t4 = paper.text(x+210,y+28,"w ").attr({'font-weight': 'bold','font-size':'18px','stroke':'#f20515'});
+//		 t5 = paper.text(x+220,y+32," ").attr({'font-weight': 'bold','font-size':'12px','stroke':'#f20515'});
+//		 t66 = paper.text(x+270,y+28," : "+loadMagVal+" kN/m").attr({'font-weight': 'bold','font-size':'18px','stroke':'#f20515'});
+//
+//}
  
  function updateValW1(){
 	w1.remove();

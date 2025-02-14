@@ -13,8 +13,12 @@ $("#page2Div1").html("");
  df=50;
  capD = 100;
 
+if(carFlg==0){
  paper = new Raphael(document.getElementById('page2Div1'));
-
+}else{
+	 $("#page4Div2").html("");
+	paper = new Raphael(document.getElementById('page4Div2'));
+}
  width = $(window).width();
 
 	if ($(window).width() < 600) {

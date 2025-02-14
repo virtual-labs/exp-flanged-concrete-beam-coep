@@ -10,8 +10,7 @@
 
 
 
-<link rel="stylesheet"
-	href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet"
 	href=" https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -22,11 +21,59 @@
 <link rel="stylesheet" href="css/pagination.css">
 <link rel="stylesheet" href="css/rcBeam.css">
 <link rel="stylesheet" href="css/toastr.min.css">
+
 <style>
 a.disabled {
   pointer-events: none;
   cursor: default;
 }
+
+.modalPdf{
+    max-width: 90%; /* Increase the maximum width of the modal dialog */
+    width: 90%; /* Explicit width for the dialog */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+
+    width: 100%; /* Ensure the content takes full width of the dialog */
+    margin: auto; /* Center horizontally */
+}
+
+.bl {
+    animation: blink 3s infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      color: #f6fce6;
+    }
+    50% {
+      color: yellow;
+    }
+    100% {
+      color: #f6fce6;
+    }
+  }
+
+
+.blinking1 {
+    animation: blink-animation 1s infinite; /* Adjust duration for faster or slower blinking */
+}
+
+@keyframes blink-animation {
+    0% {
+        color: #a1f505; /* Start with black */
+    }
+    50% {
+        color: yellow; /* Switch to yellow */
+    }
+    100% {
+        color: #a1f505; /* Back to black */
+    }
+}
+
+
+
 </style>
 
 
@@ -36,21 +83,22 @@ a.disabled {
 	<header>
 		<img class="COEPLogo" src='images/COEPlogo.png' /> <img
 			class="VlabLogo" src='images/vlablogo.jpg' /> <span id="colgName">COEP
-			Technological University, Pune</span>
+			TECHNOLOGICAL UNIVERSITY PUNE</span>
 
 	</header>
 
    <div class="row  FirstRowtimer" > 
-	<div class="col-sm-6">  
+	<div class="col-sm-10"> 
+	 <label for="sim" style="margin-top:6px;width:100%;" class="bl">*Note : Users can click on the front and back arrows only after completing the calculations and entering the appropriate value </label>
  	</div> 
- 	<div class="col-sm-2"> 
- 	</div> 
+<!--  	<div class="col-sm-2">  -->
+<!--  	</div>  -->
  	<div class="col-sm-2" >
-		<a href="#" class="previous round disabled" id="backwardButton" >&#8249;</a>
-		<a href="#" class="next round disabled" id="forwardButton" >&#8250;</a>
+		<a href="#" class="previous round disabled" id="backwardButton" style="margin-top:1px;">&#8249;</a>
+		<a href="#" class="next round disabled" id="forwardButton" style="margin-top:1px;">&#8250;</a>
 	</div>	
- 	<div class="col-sm-2" style="margin-top: 10px;margin-bottom: 1px;">
- 	<span  id="hour" class="timer">00</span>:<span id="minute" class="timer">00</span>:<span class="timer" id="second">00</span> 	     	
+ 	<div class="col-sm-0" style="margin-top: 10px;margin-bottom: 1px;">
+<!--  	<span  id="hour" class="timer">00</span>:<span id="minute" class="timer">00</span>:<span class="timer" id="second">00</span> 	     	 -->
  	</div>
  	</div>
 	<div class="row container-fluid" id="page1" hidden>
@@ -151,25 +199,25 @@ a.disabled {
 		</div>
 	</div>
 	
-   <div class="row container-fluid" id="page5" hidden>
-		<div class="col-sm-6">
-			<div class="panel panel-primary">
-				<div class="panel-heading " id="panelHeading2">
-					<center id="centerText2">CALCULATIONS</center>
-				</div>
+<!--    <div class="row container-fluid" id="page5" hidden> -->
+<!-- 		<div class="col-sm-6"> -->
+<!-- 			<div class="panel panel-primary"> -->
+<!-- 				<div class="panel-heading " id="panelHeading2"> -->
+<!-- 					<center id="centerText2">CALCULATIONS</center> -->
+<!-- 				</div> -->
 
-				<div class="panel-body" id="page5Div1"></div>
-			</div>
-		</div>
+<!-- 				<div class="panel-body" id="page5Div1"></div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 		
-		<div class="col-sm-6">
-			<div class="panel panel-primary" >
-			<div class="panel-heading " id="panelHeading2" ><center id="centerText2">SHEAR FORCE</center></div>
-				<div class="panel-body" id="page5Div2" >
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- 		<div class="col-sm-6"> -->
+<!-- 			<div class="panel panel-primary" > -->
+<!-- 			<div class="panel-heading " id="panelHeading2" ><center id="centerText2">SHEAR FORCE</center></div> -->
+<!-- 				<div class="panel-body" id="page5Div2" > -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
    
    
 	<div class="modal fade" id="myModal" role="dialog">
@@ -196,33 +244,30 @@ a.disabled {
 	</div>
 
 
-<div class="modal fade" id="myModal1" role="dialog">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content " style = "width:1000px;">
-				<div class="modal-header ">
-					<h4 class="modal-title" style="font-weight: 600;"></h4>
-					<button type="button" class="close" data-dismiss="modal"
-						style="color: black;">&times;</button>
-                    
-                    
-                    
-				</div>
-				<div class="modal-body ">
-					<p id="MsgModal1"></p>
-				</div>
-				<div class="modal-footer ">
-					<button type="button" id="btnModal" class="btn"
-						data-dismiss="modal">Close</button>
-				</div>
-			</div>
-
-		</div>
-	</div>
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered modalPdf" role="document">
+        <!-- Modal content-->
+        <div class="modal-content" style="max-width: 80%; margin: auto;">
+            <div class="modal-header" style="justify-content: center; text-align: center;">
+                <h4 class="modal-title" style="font-weight: 600; margin: 0 auto;">Reference</h4>
+                <button type="button" class="close" data-dismiss="modal" style="">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="MsgModal1"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnModal" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-	<footer> Copyrights &copy; COEP - Virtual Lab </footer>
+
+
+
+
+	<footer> Copyrights &copy; COEPTECH - Virtual Labs </footer>
 </body>
 <!-- Main Div -->
 
@@ -245,7 +290,7 @@ a.disabled {
 <script type="text/javascript" src="src/pagination.js"></script>
 <script type="text/javascript" src="src/toastr.min.js"></script>
 <!-- <script type="text/javascript" src="src/render.js"></script> -->
-<script type="text/javascript" src="src/timer.js"></script>
+<!-- <script type="text/javascript" src="src/timer.js"></script> -->
 <script type="text/javascript" src="src/beamDiag.js"></script>
 <script type="text/javascript" src="src/render.js"></script>
 <script type="text/javascript" src="src/flangedBeamConfig.js"></script>
@@ -254,34 +299,55 @@ a.disabled {
 <script type="text/javascript" src="src/calculatePage1.js"></script>
 <script type="text/javascript" src="src/secondPageAnim.js"></script>
 <script type="text/javascript" src="src/effectDepthGraph.js"></script>
+<script type="text/javascript" src="src/effectiveDepthCase2.js"></script>
+
 <script type="text/javascript" src="src/reinStaticAnim.js"></script>
 
+<script>
 
-<script> 
-     toastr.options = {
-        'closeButton': true,
-        'debug': false,
-        'newestOnTop': false,
-        'progressBar': false,
-        'positionClass': 'toast-top-right',
-        'preventDuplicates': false,
-        'showDuration': '1000',
-        'hideDuration': '800',
-        'timeOut': '800',
-        'extendedTimeOut': '900',
-        'showEasing': 'swing',
-        'hideEasing': 'linear',
-        'showMethod': 'fadeIn',
-        'hideMethod': 'fadeOut',
-        'margin-bottom':'50%'
-    }
+toastr.options = {
+	    'closeButton': true,
+	    'debug': false,
+	    'newestOnTop': false,
+	    'progressBar': false,
+	    'positionClass': 'toast-top-right',
+	    'preventDuplicates': false,
+	    'showDuration': '1000',
+	    'hideDuration': '800',
+	    'timeOut': 0, // Keep the toast visible indefinitely
+	    'extendedTimeOut': 0, // Prevent hiding on hover-out
+	    'showEasing': 'swing',
+	    'hideEasing': 'linear',
+	    'showMethod': 'fadeIn',
+	    'hideMethod': 'fadeOut'
+	};
+
+// Add blinking text to the toast
+// 	toastr.success('<span class="blinking1">This message will blink!</span>', 'Blinking Toast');
+
+
+
+//      toastr.options = {
+//         'closeButton': true,
+//         'debug': false,
+//         'newestOnTop': false,
+//         'progressBar': false,
+//         'positionClass': 'toast-top-right',
+//         'preventDuplicates': false,
+//         'showDuration': '1000',
+//         'hideDuration': '800',
+//         'timeOut': '800',
+//         'extendedTimeOut': '900',
+//         'showEasing': 'swing',
+//         'hideEasing': 'linear',
+//         'showMethod': 'fadeIn',
+//         'hideMethod': 'fadeOut',
+//         'margin-bottom':'50%'
+//     }
 
 // toastr.warning('Kuch to gadbad hai');
 // toastr.success("Jalma re");
 // toastr.error("Zala gondhal");
 // toastr.info("Tuza mahiti sathi");
 </script>
-
-
-
 </html>
