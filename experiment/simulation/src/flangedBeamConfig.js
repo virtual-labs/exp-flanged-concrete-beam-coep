@@ -24,7 +24,9 @@ var htm=''
 	   +'<label class="labelstyle marginBottom">Grade of Concrete f<sub>ck</sub> : </label>'
 	   +'</div>'	   
 	   +'<div class="col-sm-3">'
+	   
 	   +'<select  class="form-control selectConf marginBottom" id="concreteGrade"  style="height:auto;margin-bottom:5px; " >'
+	   
 	   +'<option value="0">--- Select grade of concrete --- </option>'
 //	   +'<option value="10" >M10  </option>'
 	   +'<option value="15" >M15  </option>'
@@ -70,44 +72,44 @@ var htm=''
        +'</div>'
        +'</div>'
 	   
-	   + '<div class="row">'	     
-	   +'<div class="col-sm-6">'
-	   +'<label class="labelstyle marginBottom">Load acting on beam :  </label>'
-	   +'</div>'
-	   
-	   +'<div class="col-sm-4">'
-	   +'<select  class="form-control selectConf marginBottom" id="loadOnBeam" " style="height:auto;margin-bottom:5px; " >'
-	   +'<option value="0">--- Select  --- </option>'
-	   +'<option value="1" >Uniform distributed load  </option>'
-	   +'<option value="2" disabled>Pointer load  </option>'
-	 
-	  
-	   +'</select>'	   
-	  
-	   +'</div>'
-	   +'<div class="col-sm-2">'
-	    +'</div>'
-       +'</div>'
+//	   + '<div class="row">'	     
+//	   +'<div class="col-sm-6">'
+//	   +'<label class="labelstyle marginBottom">Load acting on beam :  </label>'
+//	   +'</div>'
+//	   
+//	   +'<div class="col-sm-4">'
+//	   +'<select  class="form-control selectConf marginBottom" id="loadOnBeam" " style="height:auto;margin-bottom:5px; " >'
+//	   +'<option value="0">--- Select  --- </option>'
+//	   +'<option value="1" >Uniform distributed load  </option>'
+//	   +'<option value="2" disabled>Pointer load  </option>'
+//	 
+//	  
+//	   +'</select>'	   
+//	  
+//	   +'</div>'
+//	   +'<div class="col-sm-2">'
+//	    +'</div>'
+//       +'</div>'
     
-	+'<div class="row">'	
-	+'<div class="col-sm-6">'
-	+'<label class="labelstyle marginBottom">Enter magnitude of Load w (kN/m): </label>'
-	+'</div>'
-	+'<div class="col-sm-4">'
-//	+'<input type="number"  style= "width:100%; " onblur="updateLoadMag()" class=" form-control" id="loadMag" value="10">'
-	+'<input type="number"  style= "width:100%; " class=" form-control" id="loadMag" >'
-
-	+'</div>'
-	+'<div class="col-sm-2">'
-	+'</div>'	
-    +'</div>'
+//	+'<div class="row">'	
+//	+'<div class="col-sm-6">'
+//	+'<label class="labelstyle marginBottom">Enter magnitude of Load w (kN/m): </label>'
+//	+'</div>'
+//	+'<div class="col-sm-4">'
+////	+'<input type="number"  style= "width:100%; " onblur="updateLoadMag()" class=" form-control" id="loadMag" value="10">'
+//	+'<input type="number"  style= "width:100%; " class=" form-control" id="loadMag" >'
+//
+//	+'</div>'
+//	+'<div class="col-sm-2">'
+//	+'</div>'	
+//    +'</div>'
     
     
     + '<div class="row" id="blink" hidden>'
 	+'<div class="col-sm-6">'
 	+'</div>'
 	+'<div class="col-sm-6">'
-	+'<span><label class="labelstyle" style="margin-bottom:30px;">(liveLoad + deadLoad)</label></span>'
+	+'<span><label class="labelstyle" style="margin-bottom:10px;">(liveLoad + deadLoad)</label></span>'
 	+'</div>'
 	+'</div>'
 	
@@ -123,7 +125,7 @@ var htm=''
 //	   +'</div>'
 	
 	
-	+ '<div class="row">'
+	   + '<div class="row">'
 	   +'<div class="col-sm-6">'
 	   +'<label class="labelstyle marginBottom" >Enter width of Support w1 (m) :  </label>'
 	   +'</div>'
@@ -139,7 +141,7 @@ var htm=''
 	   +'<label class="labelstyle marginBottom">Enter width of Support w2 (m) :  </label>'
 	   +'</div>'
 	   +'<div class="col-sm-4">'
-	   +'<input type="number"  style= "width:100%;"  class=" form-control" id="w2Width" onblur="updateValW2(),updateLoadMag(),ren()"  >'
+	   +'<input type="number"  style= "width:100%;"  class=" form-control" id="w2Width" onblur="updateValW2(),ren()"  >'
 	   +'</div>'
 	   +'<div class="col-sm-2">'
 	   +'</div>'
@@ -200,8 +202,13 @@ var htm=''
 	   +'<div class="col-sm-3">'
 	   +'<input type="number"  style= "width:100%;"  class=" form-control" id="nominalCover" >'
 	   +'</div>'
-	    +'<div class="col-sm-3">'
-	   +'<button type="button"   class="btn btn-info btnStyle" id="refer" data-toggle="modal" data-target="#myModal1" >Reference</button>'
+	    +'<div class="col-sm-2">'
+	   +'<button type="button"   class="btn btn-info btnStyle" id="refer" data-toggle="modal" data-target="#myModal1" >Refer</button>'
+//	    +'<i class="fa fa-info-circle infoGreen"  title="Do you like my fa-cog icon?"  id="refer" data-toggle="modal" data-target="#myModal1" ></i>'
+//	    +'<i class="fa fa-info-circle fafaInfoGreen"  title="Reference"  id="refer" data-toggle="modal" data-target="#myModal1" ></i>'
+
+	   +'</div>'
+	   +'<div class="col-sm-1">'
 	   +'</div>'
 	   +'</div>'
 	   
@@ -225,15 +232,11 @@ var htm=''
 		conVal = parseInt($("#concreteGrade").val());
 		 $("#concreteLabel").prop("hidden",false);
 	  $("#relTemp").text(conVal+" Mpa");
+	  toastr.remove();
 	  change();
 	}); 
    
-    $("#refer").click(function(){
-	var ht = '<iframe src="images/plain-and-reinforced-concrete.pdf#page=48"  width="100%;" height="600px;" ></iframe>'
-	$("#MsgModal1").html(ht);
-});
-   
-   
+ 
        $("#steelGrade").change(function(){
 	  steelVal = parseInt($("#steelGrade").val());	  
 	   $("#steelLabel").prop("hidden",false);
@@ -244,11 +247,11 @@ var htm=''
 	beamLoad = parseInt($("#loadOnBeam").val());
 });
 
-$("#loadMag").click(function(){
-	$("#blink").prop("hidden",false);
-	blinker();
-	
-});
+//$("#loadMag").click(function(){
+//	$("#blink").prop("hidden",false);
+//	blinker();
+//	
+//});
 
 //$("#beamWidth1").click(function(){
 //	$("#blink").prop("hidden",true);
@@ -256,13 +259,25 @@ $("#loadMag").click(function(){
 
 var totDepth=0;
  
- $("#w1Width,#w2Width").click(function(){
-	 toastr.warning('Enter Values between 0.23 m to 2 m');
+ $("#w1Width").click(function(){
+//	$("#blink").prop("hidden",false);
+//	blinker();
+	toastr.error('<span class="blinking1">Enter Values between 0.23 m to 2 m</span>');
+//	 toastr.warning('Enter Values between 0.23 m to 2 m');
+	 $("#blink").prop("hidden",true);
+});
+
+
+$("#w2Width").click(function(){
+	 toastr.remove();
+	toastr.error('<span class="blinking1">Enter Values between 0.23 m to 2 m</span>');
+//	 toastr.warning('Enter Values between 0.23 m to 2 m');
 	 $("#blink").prop("hidden",true);
 });
  
 var longReinVal=0; 
 $("#longRein").change(function(){
+     toastr.remove();
 		longReinVal = $("#longRein").val();
 		ren();	
 
@@ -275,16 +290,31 @@ $("#shearRein").change(function(){
 	}); 
  
  $("#nominalCover").click(function(){
-	toastr.warning('Enter Values between 20 mm to 70 mm');
+	toastr.error('<span class="blinking1">Enter Values between 20 mm to 70 mm</span>');
+//	toastr.warning('Enter Values between 20 mm to 70 mm');
 	$("#blink1").prop("hidden",false);
 	blinker();
 });
  
  
+  $("#refer").click(function(){
+	var ht = '<iframe src="images/plain-and-reinforced-concrete.pdf#page=48"  width="100%;" height="600px;" ></iframe>'
+	
+	$(".modal-header").css('background-color', '#45898680');
+	$(".modal-header").html("Reference");
+	$("#MsgModal1").html(ht);
+	
+});
+ 
+ 
 
 $("#checkConfg").click(function(){
+	toastr.remove();
+	
+	
+	
 	beamSpanVal = $("#beamSpan").val();
-	loadMagVal = $("#loadMag").val();
+//	loadMagVal = $("#loadMag").val();
 	w1WidthVal = $("#w1Width").val();
 	w2WidthVal = $("#w2Width").val();
 	nominalCoverVal = $("#nominalCover").val();
@@ -295,15 +325,22 @@ $("#checkConfg").click(function(){
 	steelVal = parseInt($("#steelGrade").val());	
 	conVal = parseInt($("#concreteGrade").val());
 	
-	if(beamSpanVal==""||loadMagVal==""||w1WidthVal==""||w2WidthVal==""||nominalCoverVal==""||conVal==0||steelVal==0||longReinVal==0||shearReinVal==0){
+	if(beamSpanVal==""||w1WidthVal==""||w2WidthVal==""||nominalCoverVal==""||conVal==0||steelVal==0||longReinVal==0||shearReinVal==0){
 			$(".modal-header").html("Error Message");
 			$(".modal-header").css("background","#9c1203b0");
 			$("#btnModal").removeClass("btn-success").addClass("btn-danger");
 			$("#MsgModal").html("Values Missing");
+			
+			
+//			var ht = '<iframe src="images/plain-and-reinforced-concrete.pdf#page=48"  width="100%;" height="600px;" ></iframe>'
+//	$(".modal-header").css('background-color', '#45898680');
+//	$(".modal-header").html("Reference");
+//	$("#MsgModal1").html(ht);
+			
 	}else{
 		
 	beamSpanVal = parseFloat($("#beamSpan").val());
-	loadMagVal = parseFloat($("#loadMag").val());
+//	loadMagVal = parseFloat($("#loadMag").val());
 	w1WidthVal = parseFloat($("#w1Width").val());
 	w2WidthVal = parseFloat($("#w2Width").val());
 	nominalCoverVal = parseFloat($("#nominalCover").val());
@@ -330,19 +367,37 @@ $("#checkConfg").click(function(){
 			$(".modal-header").css("background","#9c1203b0");
 			$("#btnModal").removeClass("btn-success").addClass("btn-danger");
 			$("#MsgModal").html("Enter the value for w<sub>2</sub> between 0.23 m to 2 m");
+	}else if(beamSpanVal>10){
+		   
+		   $(".modal-header").html("Error Message");
+			$(".modal-header").css("background","#9c1203b0");
+			$("#btnModal").removeClass("btn-success").addClass("btn-danger");
+			$("#MsgModal").html("Enter the value between 1m to 10m");
+		   
 	}else{
-		
+		$("#blink1").prop("hidden",true);
 		$('#forwardButton').removeClass("disabled");		
 			$("#btnModal").removeClass("btn-danger").addClass("btn-success");
 	        $(".modal-header").html("Success Message");
             $(".modal-header").css("background","#5cb85c");
 			$("#MsgModal").html("<b>Configuration successful. Click the next arrow to proceed.</b>");
 			
+			$("#beamSpan").prop("disabled",true);
+			$("#concreteGrade").prop("disabled",true);
+			$("#steelGrade").prop("disabled",true);
+			$("#w1Width").prop("disabled",true);
+			$("#w2Width").prop("disabled",true);
+			
+			$("#longRein").prop("disabled",true);
+			$("#shearRein").prop("disabled",true);
+			$("#nominalCover").prop("disabled",true);
 			
 	    }
 	}
 	
 }); 
+ 
+ 
  
 function blinker()
   {

@@ -83,7 +83,7 @@ x=50,y=-100;
 //      t44 = paper.text(x+260,y+120,"w : "+loadMagVal+ " kN/m").attr({'font-weight': 'bold','font-size':'15px','stroke':'red'});   
       
      var t44 = paper.text(x+240,y+120,"w ").attr({'font-weight': 'bold','font-size':'15px','stroke':'red'});
-     var t441 = paper.text(x+250,y+125,"u ").attr({'font-weight': 'bold','font-size':'8px','stroke':'red'});
+     var t441 = paper.text(x+250,y+125," ").attr({'font-weight': 'bold','font-size':'8px','stroke':'red'});
      var t444 = paper.text(x+290,y+120," : "+loadMagVal+" kN/m").attr({'font-weight': 'bold','font-size':'15px','stroke':'red'});
 
       
@@ -185,7 +185,7 @@ function factLoad(){
     
 //     var wuload = parseInt(facLoad);
       var t44 = paper.text(x+240,y+120,"w ").attr({'font-weight': 'bold','font-size':'15px','stroke':'red'});
-     var t441 = paper.text(x+250,y+125,"u ").attr({'font-weight': 'bold','font-size':'8px','stroke':'red'});
+     var t441 = paper.text(x+250,y+125," ").attr({'font-weight': 'bold','font-size':'8px','stroke':'red'});
      var t444 = paper.text(x+290,y+120," : "+loadMagVal+" kN/m").attr({'font-weight': 'bold','font-size':'15px','stroke':'red'});
 
 
@@ -299,7 +299,7 @@ function leffective(){
     
      var wuload = parseInt(facLoad);
  var t44 = paper.text(x+240,y+120,"w ").attr({'font-weight': 'bold','font-size':'15px','stroke':'red'});
-     var t441 = paper.text(x+250,y+125,"u ").attr({'font-weight': 'bold','font-size':'8px','stroke':'red'});
+     var t441 = paper.text(x+250,y+125," ").attr({'font-weight': 'bold','font-size':'8px','stroke':'red'});
      var t444 = paper.text(x+290,y+120," : "+loadMagVal+" kN/m").attr({'font-weight': 'bold','font-size':'15px','stroke':'red'});
 
 }
@@ -390,7 +390,7 @@ function shearForceFinal(){
     
      var wuload = parseInt(facLoad);
  var t44 = paper.text(x+240,y+120,"w ").attr({'font-weight': 'bold','font-size':'15px','stroke':'red'});
-     var t441 = paper.text(x+250,y+125,"u ").attr({'font-weight': 'bold','font-size':'8px','stroke':'red'});
+     var t441 = paper.text(x+250,y+125," ").attr({'font-weight': 'bold','font-size':'8px','stroke':'red'});
      var t444 = paper.text(x+290,y+120," : "+loadMagVal+" kN/m").attr({'font-weight': 'bold','font-size':'15px','stroke':'red'});
 
 //	if(shearForce%2==0){
@@ -495,7 +495,7 @@ function bendingMomentFinal(){
     
 //     var wuload = parseInt(facLoad);
  var t44 = paper.text(x+240,y+120,"w ").attr({'font-weight': 'bold','font-size':'15px','stroke':'red'});
-     var t441 = paper.text(x+250,y+125,"u ").attr({'font-weight': 'bold','font-size':'8px','stroke':'red'});
+     var t441 = paper.text(x+250,y+125," ").attr({'font-weight': 'bold','font-size':'8px','stroke':'red'});
      var t444 = paper.text(x+290,y+120," : "+loadMagVal+" kN/m").attr({'font-weight': 'bold','font-size':'15px','stroke':'red'});
 
 //	if(shearForce%2==0){

@@ -9,70 +9,80 @@ var maxCriteria = 0;
 var pressureValue;
 var dValRepeat,overDepthValRepeat,astValRepeat;
 var ValueD = 0;
+var astCalculated1;
+
 steelStr = 0.133;
 function Dcalculate(){
 	
-	
-	
+//	$('#forwardButton').addClass("disabled");
+//	$('#backwardButton').addClass("disabled");
 //	var bendingMom=10;
 //	var effectCover = 30;
-    console.log("bending Moment"+bendingMom);
-    console.log("effectCover"+effectCover);
+//    console.log("bending Moment"+bendingMom);
+//    console.log("effectCover"+effectCover);
 	var dCalculate = ''
 	              +'<div class = "row">'
-                  +'<div class="col-sm-6 marginBottom" id="steelGradeLabel">'
+	              +'<div class="col-sm-1">'
+                  +'</div>'
+                  +'<div class="col-sm-10 marginBottom" id="steelGradeLabel">'
                   +' <center><label class="labelstyle " style="margin-left:10px;">Utilmate moment carrying capacity of a balanced section <br>(For Fe'+steelVal+')  M<sub>u</sub> = '+steelStr+' f<sub>ck</sub> bd<sup>2</sup> </label></center> '
                   +'</div>'
 //                   +'<div class="col-sm-1">'
 //                  +'</div>'
-                  +'<div class="col-sm-5 marginBottom" id="widthLabel">'
-                  +' <center><label class="labelstyle " style="margin-left:10px;">Width (b) = '+bfVal+' mm </label></center> '
-                  +'</div>' 
+//                  +'<div class="col-sm-5 marginBottom" id="widthLabel">'
+//                  +' <center><label class="labelstyle " style="margin-left:10px;">Width (b) = '+bfVal+' mm </label></center> '
+//                  +'</div>' 
                   +'<div class="col-sm-1">'
                   +'</div>'
                   +'</div>'
                   
-                  +'<div class = "row">'
-                  +'<div class="col-sm-6 marginBottom" id="bendLabel">'
-                  +' <center><label class="labelstyle " > M<sub>u</sub>  = '+bendingMom+' kNm  </label></center> '
-                  +'</div>'
+//                  +'<div class = "row">'
+//                  +'<div class="col-sm-6 marginBottom" id="bendLabel">'
+//                  +' <center><label class="labelstyle " > M<sub>u</sub>  = '+bendingMom+' kNm  </label></center> '
+//                  +'</div>'
+////                  +'<div class="col-sm-1">'
+////                  +'</div>'
+//                  +'<div class="col-sm-5 marginBottom" id="concreteGradeLabel">'
+//                  +' <center><label class="labelstyle " >f<sub>ck</sub> = '+conVal+' Mpa </label></center> '
+//                  +'</div>' 
 //                  +'<div class="col-sm-1">'
 //                  +'</div>'
-                  +'<div class="col-sm-5 marginBottom" id="concreteGradeLabel">'
-                  +' <center><label class="labelstyle " >f<sub>ck</sub> = '+conVal+' Mpa </label></center> '
-                  +'</div>' 
-                  +'<div class="col-sm-1">'
-                  +'</div>'
-                  +'</div>'  
-                  
-                  +'<div class = "row">'
-                  +'<div class="col-sm-1">'
-                  +'</div>'
-                  +'<div class="col-sm-3 marginBottom" id="longLabel">'
-                  +' <center><label class="labelstyle " > &empty; = '+longReinVal+' mm  </label></center> '
-                  +'</div>'
+//                  +'</div>'  
+//                  
+//                  +'<div class = "row">'
 //                  +'<div class="col-sm-1">'
 //                  +'</div>'
-                  +'<div class="col-sm-3 marginBottom" id="shearLabel">'
-                  +' <center><label class="labelstyle " >&empty;<sub>s</sub> = '+shearReinVal+' mm </label></center> '
-                  +'</div>' 
-                  
-                  +'<div class="col-sm-3 marginBottom" id="nominalCLabel">'
-                  +' <center><label class="labelstyle " >cc = '+nominalCoverVal+' mm </label></center> '
-                  +'</div>'
-                  
-                  +'<div class="col-sm-1">'
-                  +'</div>'
-                  +'</div>'
+//                  +'<div class="col-sm-3 marginBottom" id="longLabel">'
+//                  +' <center><label class="labelstyle " > &empty; = '+longReinVal+' mm  </label></center> '
+//                  +'</div>'
+////                  +'<div class="col-sm-1">'
+////                  +'</div>'
+//                  +'<div class="col-sm-3 marginBottom" id="shearLabel">'
+//                  +' <center><label class="labelstyle " >&empty;<sub>s</sub> = '+shearReinVal+' mm </label></center> '
+//                  +'</div>' 
+//                  
+//                  +'<div class="col-sm-3 marginBottom" id="nominalCLabel">'
+//                  +' <center><label class="labelstyle " >cc = '+nominalCoverVal+' mm </label></center> '
+//                  +'</div>'
+//                  
+//                  +'<div class="col-sm-1">'
+//                  +'</div>'
+//                  +'</div>'
                    
                   
                    +'<div class="row" id="effectiveDepth" >'
 				   +'<div class="col-sm-5 ">'
 				   +'<label  id="enterLoad"  class="" style="font-size:16px;margin:15px 10px ;">Required effective depth for balanced section (d<sub>eff</sub>)mm :  </label>'
 				   +'</div>'
-				   +'<div class="col-sm-4" id="valueStep1">'
+				   +'<div class="col-sm-3" id="valueStep1">'
 				   +'<input type="number"  value="" id="text6"  style=margin:15px 10px;width:150%;height:50%;" class=" form-control" />'
 				   +'</div>'
+				   
+				   +'<div class="col-sm-1">'
+				   +'<i class="fa fa-info-circle fafaInfoGreen"  title="Refer Values" style="margin-top:15px;" id="edVal" data-toggle="modal" data-target="#myModal" ></i>'
+
+				   +'</div>'
+				   
 				   +'<div class="col-sm-3"  id="submitStep1">'
 				   +'<button type="submit" class="btn btn-danger"  id="submit_load6" data-toggle="modal" data-target="#myModal" style="width:100%;height:50%;margin-top: 16px;" >Submit</input>'
 				   +'</div>'
@@ -82,8 +92,12 @@ function Dcalculate(){
 				   +'<div class="col-sm-5 ">'
 				   +'<label  id="enterLoad"  class="" style="font-size:16px;margin:15px 10px ;">Calculate Overall depth (D) mm :  </label>'
 				   +'</div>'
-				   +'<div class="col-sm-4" id="valueStep1">'
+				   +'<div class="col-sm-3" id="valueStep1">'
 				   +'<input type="number"  value="" id="text7"  style=margin:15px 10px;width:150%;height:50%;" class=" form-control" />'
+				   +'</div>'
+				    +'<div class="col-sm-1">'
+				   +'<i class="fa fa-info-circle fafaInfoGreen"  title="Refer Values" style="margin-top:15px;" id="Dval" data-toggle="modal" data-target="#myModal" ></i>'
+
 				   +'</div>'
 				   +'<div class="col-sm-3"  id="submitStep1">'
 				   +'<button type="submit" class="btn btn-danger"  id="submit_load7" data-toggle="modal" data-target="#myModal" style="width:100%;height:50%;margin-top: 16px;" >Submit</input>'
@@ -94,9 +108,15 @@ function Dcalculate(){
 				   +'<div class="col-sm-5 ">'
 				   +'<label  id="enterLoad"  class="" style="font-size:16px;margin:15px 10px ;">Calculate area of tension reinforcement (Ast) for balanced section (mm<sup>2</sup>):  </label>'
 				   +'</div>'
-				   +'<div class="col-sm-4" id="valueStep1">'
+				   +'<div class="col-sm-3" id="valueStep1">'
 				   +'<input type="number"  value="" id="text8"  style=margin:15px 10px;width:150%;height:50%;" class=" form-control" />'
 				   +'</div>'
+				   
+				     +'<div class="col-sm-1">'
+				   +'<i class="fa fa-info-circle fafaInfoGreen"  title="Refer Values" style="margin-top:15px;" id="astInfo" data-toggle="modal" data-target="#myModal" ></i>'
+
+				   +'</div>'
+				   
 				   +'<div class="col-sm-3"  id="submitStep1">'
 				   +'<button type="submit" class="btn btn-danger"  id="submit_load8" data-toggle="modal" data-target="#myModal" style="width:100%;height:50%;margin-top: 16px;" >Submit</input>'
 				   +'</div>'
@@ -178,6 +198,34 @@ function Dcalculate(){
 	   var dValEnter;
 	   var id5=1;
 	   var modelImg1;
+	   
+	    $("#edVal").click(function(){
+			$(".modal-header").html("Refer Values");
+			$(".modal-header").css("background","rgba(78, 109, 114, 1)");
+			$(".modal-header").css("color","#fff");
+			$("#btnModal").removeClass("btn-success").addClass("btn-danger");
+			$("#MsgModal").html("<b>M<sub>u</sub> = "+bendingMom+" kNm <br> Width (b) = "+bfVal+" mm <br>f<sub>ck</sub> = "+conVal+" Mpa</b>");
+	
+		});
+	   
+	   $("#Dval").click(function(){
+		   $(".modal-header").html("Refer Values");
+			$(".modal-header").css("background","rgba(78, 109, 114, 1)");
+			$(".modal-header").css("color","#fff");
+			$("#btnModal").removeClass("btn-success").addClass("btn-danger");
+			$("#MsgModal").html("<b>&empty; = "+longReinVal+" mm <br> &empty;<sub>s</sub> = "+shearReinVal+" mm <br>f<sub>ck</sub> = "+conVal+" Mpa <br> cc = "+nominalCoverVal+" mm</b>");
+	
+	});
+	
+	 $("#astInfo").click(function(){
+		   $(".modal-header").html("Refer Values");
+			$(".modal-header").css("background","rgba(78, 109, 114, 1)");
+			$(".modal-header").css("color","#fff");
+			$("#btnModal").removeClass("btn-success").addClass("btn-danger");
+			$("#MsgModal").html("<b>f<sub>ck</sub> = "+conVal+" Mpa <br> f<sub>y</sub> = "+steelVal+" Mpa <br> M<sub>u</sub> = "+bendingMom+" kNm <br> Width (b) = "+bfVal+" mm</b>");
+	
+	});
+	   
 	   $("#submit_load6").click(function(){
 		
 		if($("#text6").val() == '')
@@ -350,7 +398,7 @@ $("#MsgModal").html(modelImg1);
 			var dmul = parseFloat(mulOfTerms);
 			
 			var divVal1 = (numMul/dmul).toFixed(2);
-			var subCal = 1-divVal1;
+			var subCal = parseFloat(1)-parseFloat(divVal1);
 			var sqrtDiv = Math.sqrt(subCal);
 			
 			var sqrtVal = sqrtDiv.toFixed(2);
@@ -432,7 +480,7 @@ $("#MsgModal").html(modelImg1);
 		});
 		
 		$("#submit_load9").click(function(){
-			console.log("ValueD : "+ValueD);
+//			console.log("ValueD : "+ValueD);
 			
             var sub = ValueD-effectCover;
 			var mulConver = bendingMom*Math.pow(10,6);
@@ -468,13 +516,13 @@ $("#MsgModal").html(modelImg1);
 			pressureValue =$("#selectD").children(":selected").attr("value");
 			 
 			 $("#selectD").children('option[value="' + pressureValue + '"]').attr('disabled', true);
-			           console.log("maxCriteria "+maxCriteria);
-						console.log("minCriteria "+minCriteria);
-						console.log("overDepthVal "+overDepthVal);
-						console.log("astCalculated "+astCalculated);
-						console.log("ValueD "+ValueD);
+//			           console.log("maxCriteria "+maxCriteria);
+//						console.log("minCriteria "+minCriteria);
+//						console.log("overDepthVal "+overDepthVal);
+//						console.log("astCalculated "+astCalculated);
+//						console.log("ValueD "+ValueD);
 						
-						var astCalculated1 = parseFloat(astCalculated);
+						 astCalculated1 = parseFloat(astCalculated);
 						var ValueD1 = parseFloat(ValueD);
 //			var maxCriteriatemp1 = parseFloat(maxCriteria);			
 //			var minCriteriatemp2 = parseFloat(minCriteria);	
@@ -508,11 +556,11 @@ $("#MsgModal").html(modelImg1);
 					blinker2();
 					$("#lessThan470").prop("hidden",true);
 					$("#greaterThan470").prop("hidden",false);
-					console.log("message under");
+//					console.log("message under");
 					
 					if(astCalculated1<minCriteria){
 						blinker2();
-						console.log("minimum ast Provide");
+//						console.log("minimum ast Provide");
 						$("#text9").val(minCriteria);
 						ast = minCriteria;
 						astCalculated = ast;
@@ -520,7 +568,8 @@ $("#MsgModal").html(modelImg1);
 					$("#calculatedAst").prop("hidden",false);
 					$("#selectD").prop("disabled",true);
 					$("#submit_load9").prop("disabled",true);
-					
+					$("#submit_load10").prop("disabled",false);
+					autoScroll();
 					}
 					else if(astCalculated1>maxCriteria){
 						
@@ -535,8 +584,10 @@ $("#MsgModal").html(modelImg1);
 						$("#lessThan470").prop("hidden",true);
 					$("#calculatedAst").prop("hidden",false);
 					$("#selectD").prop("disabled",true);
+					autoScroll();
 					$("#submit_load9").prop("disabled",true);
-						console.log("calculate");
+					$("#submit_load10").prop("disabled",false);
+//						console.log("calculate");
 						
 					}
 				}
@@ -562,22 +613,23 @@ $("#MsgModal").html(modelImg1);
 			 $("#selectD").prop("disabled",false);
 			 $("#submit_load9").prop("disabled",false);
 			 
+			 $("#submit_load10").prop("disabled",true);
 //			 $(".modal-header").html("Error Message");
 //			$(".modal-header").css("background","#23435c");
 //			$("#btnModal").removeClass("btn-success").addClass("btn-danger");
 //            $("#MsgModal").html("Select another depth D and plot the graph.");
 			 
-			 console.log("ast1 : "+ast1);
+//			 console.log("ast1 : "+ast1);
 			                 tempJson={};
 							 tempJson.selectedD = ValueD;
 							 tempJson.calAst = astCalculated;
 							 arrGraphStore.push(tempJson);
 							 graphJson.astGraph=arrGraphStore;
 							 
-							 console.log(graphJson);
+//							 console.log(graphJson);
 							 $("#page4Div2").html('');
 							 graphCreate(graphJson);
-			 
+			     $("#selectD").val(0);
 //							 graphJson = {};
 //arrGraphStore = [];
 //            $("#page1,#page2,#page3").prop("hidden",true);
@@ -585,103 +637,208 @@ $("#MsgModal").html(modelImg1);
 //               reinCalulateBar();
 		});
 
-	function graphCreate(graphJson)
-	{
-//	$("#page3Div2").html('');	
-	var xdata=[];
-	var ydata=[];
-	
-	var graphData1=[];
-	
-	
-	for (var i = 0; i < graphJson.astGraph.length; i++)
-	 {
-		
-		xdata[i] = parseFloat(graphJson.astGraph[i].selectedD);
-		ydata[i] = parseFloat(graphJson.astGraph[i].calAst);
-		
-	}
-	
+}
+function graphCreate(graphJson) {
+//    $("#page4Div2").html('');
+    var xdata = [];
+    var ydata = [];
 
-		console.log("After xdata "+xdata);
-		console.log("After ydata "+ydata);
-	
-	for (var j = 0; j < graphJson.astGraph.length; j++) {
-			tempArr = [];
-			tempArr[0] = xdata[j];
-			tempArr[1] = ydata[j];
-			graphData1.push(tempArr);
+    var graphData1 = [];
+    var graphDataSort = [];
 
-	}
-		console.log("xdata "+xdata);
-		console.log("ydata "+ydata);
-		console.log("graphData1 "+graphData1);
-		ydata.sort(function(a, b) { return a - b });
-		xdata.sort(function(a, b) { return a - b });
-		console.log("After xdata "+xdata);
-		console.log("After ydata "+ydata);
-		Xmax = parseFloat(xdata[xdata.length - 1]);
-		Ymax = parseFloat(ydata[ydata.length - 1]);
-		console.log("Xmax "+Xmax);
-		console.log("Ymax "+Ymax);
-	
-		Xmin  = parseFloat(xdata[0]);
-		Ymin  = parseFloat(ydata[0]);
+    for (var i = 0; i < graphJson.astGraph.length; i++) {
+        xdata[i] = parseInt(graphJson.astGraph[i].selectedD);
+        ydata[i] = parseFloat(graphJson.astGraph[i].calAst);
+    }
 
-		Highcharts.chart('page4Div2', {
-			title: {
-				text: 'Selected Depth'
-			},
-//			subtitle: {
-//				text: 'Meter Constant is  pulses (per/ltr)'
-//			},
-			xAxis: {
-				min: Xmin,
-				max: Xmax,
-				title: {
-					text: 'Selected D'
-				}
-			},
-			yAxis: {
-				min: Ymin,
-				max: Ymax,
-				title: {
-					text: 'Calculated AST'
-				}
-			},
-			series: [
-//				{
-//					type: 'line',
-//					name: 'Standard value',
-//					data: graphData1,
-//					marker: {
-//						enabled: false
-//					},
-//					states: {
-//						hover: {
-//							lineWidth: 0
-//						}
-//					},
-//					enableMouseTracking: false
-//				},
+    for (var j = 0; j < graphJson.astGraph.length; j++) {
+        let tempArr = [];
+        tempArr[0] = xdata[j];
+        tempArr[1] = ydata[j];
+        graphData1.push(tempArr);
+    }
 
-				{
-					type: 'scatter',
-					name: 'Observation value',
+    // Custom sort function to place 1000 at the end
+    xdata.sort(function(a, b) {
+        if (a === 1000) return 1;
+        if (b === 1000) return -1;
+        return a - b;
+    });
 
-					data: graphData1,
-					marker: {
-						radius: 4
-					}
-				}]
+    // Ensure graphData1 is sorted by the custom sorted xdata
+    graphData1.sort(function(a, b) {
+        if (a[0] === 1000) return 1;
+        if (b[0] === 1000) return -1;
+        return a[0] - b[0];
+    });
 
-		});
-	}	
+    ydata.sort(function(a, b) { return a - b });
 
+    Xmax = parseInt(xdata[xdata.length - 1]);
+    Ymax = parseFloat(ydata[ydata.length - 1]);
+
+    Xmin = parseInt(xdata[0]);
+    Ymin = parseFloat(ydata[0]);
+
+    graphDataSort = graphData1.slice(); // Make a copy of the sorted graph data
+
+    // Determine threshold for higher side (e.g., the top 20% of values)
+    var threshold = ydata[Math.floor(ydata.length * 0.8)];
+
+    Highcharts.chart('page4Div2', {
+        title: {
+            text: 'Selected Depth'
+        },
+
+        xAxis: {
+            min: Xmin,
+            max: Xmax,
+            title: {
+                text: 'Selected D'
+            }
+        },
+        yAxis: {
+            min: Ymin,
+            max: Ymax,
+            title: {
+                text: 'Calculated AST'
+            }
+        },
+        series: [
+            {
+                type: 'line',
+                name: 'Standard value',
+                data: graphDataSort,
+                marker: {
+                    enabled: false
+                },
+                states: {
+                    hover: {
+                        lineWidth: 0
+                    }
+                },
+                enableMouseTracking: false
+            },
+
+            {
+                type: 'scatter',
+                name: 'Observation value',
+                data: graphData1,
+                marker: {
+                    radius: 4
+                },
+                zones: [{
+                    value: threshold,
+                    color: '#7240a1' // Default blue color
+                }, {
+                    color: '#ff0000' // Red color for higher values
+                }]
+            }
+        ]
+    });
 }
 
+
+//	function graphCreate(graphJson)
+//	{
+////	$("#page3Div2").html('');	
+//	var xdata=[];
+//	var ydata=[];
+//	
+//	var graphData1=[];
+//	
+//	
+//	for (var i = 0; i < graphJson.astGraph.length; i++)
+//	 {
+//		
+//		xdata[i] = parseFloat(graphJson.astGraph[i].selectedD);
+//		ydata[i] = parseFloat(graphJson.astGraph[i].calAst);
+//		
+//	}
+//	
+//
+//		console.log("After xdata "+xdata);
+//		console.log("After ydata "+ydata);
+//	
+//	for (var j = 0; j < graphJson.astGraph.length; j++) {
+//			tempArr = [];
+//			tempArr[0] = xdata[j];
+//			tempArr[1] = ydata[j];
+//			graphData1.push(tempArr);
+//
+//	}
+//		console.log("xdata "+xdata);
+//		console.log("ydata "+ydata);
+//		console.log("graphData1 "+graphData1);
+//		ydata.sort(function(a, b) { return a - b });
+//		xdata.sort(function(a, b) { return a - b });
+//		console.log("After xdata "+xdata);
+//		console.log("After ydata "+ydata);
+//		Xmax = parseFloat(xdata[xdata.length - 1]);
+//		Ymax = parseFloat(ydata[ydata.length - 1]);
+//		console.log("Xmax "+Xmax);
+//		console.log("Ymax "+Ymax);
+//	
+//		Xmin  = parseFloat(xdata[0]);
+//		Ymin  = parseFloat(ydata[0]);
+//
+//		Highcharts.chart('page4Div2', {
+//			title: {
+//				text: 'Selected Depth'
+//			},
+////			subtitle: {
+////				text: 'Meter Constant is  pulses (per/ltr)'
+////			},
+//			xAxis: {
+//				min: Xmin,
+//				max: Xmax,
+//				title: {
+//					text: 'Selected D'
+//				}
+//			},
+//			yAxis: {
+//				min: Ymin,
+//				max: Ymax,
+//				title: {
+//					text: 'Calculated AST'
+//				}
+//			},
+//			series: [
+////				{
+////					type: 'line',
+////					name: 'Standard value',
+////					data: graphData1,
+////					marker: {
+////						enabled: false
+////					},
+////					states: {
+////						hover: {
+////							lineWidth: 0
+////						}
+////					},
+////					enableMouseTracking: false
+////				},
+//
+//				{
+//					type: 'scatter',
+//					name: 'Observation value',
+//
+//					data: graphData1,
+//					marker: {
+//						radius: 4
+//					}
+//				}]
+//
+//		});
+//	}	
+
+
+
 function getGraphVal(){
+	
 	DCalculateVal();
+	graphCreate(graphJson);
+	
     $("#overAllDepth").prop("hidden",false);
     $("#astBlock").prop("hidden",false);	
     $("#overAllDepthSelect").prop("hidden",false);
@@ -697,13 +854,13 @@ function getGraphVal(){
 	$("#text6").prop("disabled",true);
 	$("#text7").prop("disabled",true);
 	$("#text8").prop("disabled",true);
-	$("#selectD").prop("disabled",true);
+//	$("#selectD").prop("disabled",true);
 	$("#text9").prop("disabled",true);
 	
 	$("#submit_load6").prop("disabled",true);
 	$("#submit_load7").prop("disabled",true);
 	$("#submit_load8").prop("disabled",true);
-	$("#submit_load9").prop("disabled",true);
+//	$("#submit_load9").prop("disabled",true);
 	$("#submit_load10").prop("disabled",true);
 	
 	
@@ -725,3 +882,27 @@ function blinker2()
     } 
 	setTimeout('blinker2()', 1000);
 }
+
+
+//function graphValues(){
+//	
+//	$("#text6").val(dValRepeat);
+//	$("#text6").prop("disabled",true);
+//	$("#submit_load6").prop("disabled",true);
+//	
+//	$("#overAllDepth").prop("hidden",false);
+//	$("#text7").val(overDepthVal);
+//	$("#text7").prop("disabled",true);
+//	$("#submit_load7").prop("disabled",true);
+//	
+//	$("#astBlock").prop("hidden",false);
+//	$("#text8").val(ast);
+//	$("#text8").prop("disabled",true);
+//	$("#submit_load8").prop("disabled",true);
+//	
+//	$("#overAllDepthSelect").prop("hidden",false);
+//    $("#text9").val(ast);
+//	$("#text9").prop("disabled",true);
+//	$("#submit_load9").prop("disabled",true);	
+//
+//}
