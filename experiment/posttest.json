@@ -26,30 +26,31 @@
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
-    {
-      "question": "In T beam design, when the neutral axis resides within the flange (Case 1), how is the T beam typically analyzed?",
+	   {
+      "question": "In a flanged beam system where a reinforced concrete slab sits atop a reinforced concrete beam, which component primarily bears compression forces?",
       "answers": {
-        "a": "As a circular beam  ",
-        "b": "As a trapezoidal beam  ",
-        "c": "As a rectangular beam  ",
-        "d": "As a triangular beam"
+         "a": "Reinforced concrete beam",
+        "b": "Reinforced concrete slab",
+        "c": "Steel in the beam",
+        "d": "None of the above"
       },
-     
-      "correctAnswer": "c",
+      
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
 	{
-      "question": "In Case 2 of T beam analysis, where the neutral axis is positioned below the flange and the flange thickness is sufficiently small, what is the maximum stress value reached within the concrete slab?",
+      "question": "In which part of the continuous T or L beams do slabs primarily experience tension forces?",
       "answers": {
-        "a": "0.001fck  ",
-        "b": "0.002fck  ",
-        "c": "0.003fck  ",
-        "d": "0.004fck"
+        "a": "Between supports  ",
+        "b": "Over the supports  ",
+        "c": "At the mid-span  ",
+        "d": "Along the entire length  "
       },
      
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
+
 	{
       "question": "In Case 3 of T beam analysis, where the neutral axis lies beneath the flange and the strain at the bottom of the slab remains below 0.002, what condition leads to non-linear stress distribution within the flange?",
       "answers": {

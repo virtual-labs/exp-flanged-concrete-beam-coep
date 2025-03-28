@@ -1,16 +1,17 @@
 {
   "version": 2.0,
   "questions": [
-    {
-      "question": "In a flanged beam system where a reinforced concrete slab sits atop a reinforced concrete beam, which component primarily bears compression forces?",
+ 
+	 {
+      "question": "In T beam design, when the neutral axis resides within the flange (Case 1), how is the T beam typically analyzed?",
       "answers": {
-         "a": "Reinforced concrete beam",
-        "b": "Reinforced concrete slab",
-        "c": "Steel in the beam",
-        "d": "None of the above"
+        "a": "As a circular beam  ",
+        "b": "As a trapezoidal beam  ",
+        "c": "As a rectangular beam  ",
+        "d": "As a triangular beam"
       },
-      
-      "correctAnswer": "b",
+     
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
@@ -38,18 +39,21 @@
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
+	
+	
 	{
-      "question": "In which part of the continuous T or L beams do slabs primarily experience tension forces?",
+      "question": "In Case 2 of T beam analysis, where the neutral axis is positioned below the flange and the flange thickness is sufficiently small, what is the maximum stress value reached within the concrete slab?",
       "answers": {
-        "a": "Between supports  ",
-        "b": "Over the supports  ",
-        "c": "At the mid-span  ",
-        "d": "Along the entire length  "
+        "a": "0.001fck  ",
+        "b": "0.002fck  ",
+        "c": "0.003fck  ",
+        "d": "0.004fck"
       },
      
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
+
 	
 	{
       "question": "What is the purpose of positioning transverse steel atop the slab in continuous T or L beams?",
