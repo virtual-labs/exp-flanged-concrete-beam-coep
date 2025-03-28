@@ -2,11 +2,13 @@
 ## Introduction:
 
 In scenarios where a reinforced concrete slab sits atop a reinforced concrete beam, there's an opportunity to design and construct them to function together synergistically. By strategically distributing forces, the concrete slab can bear compression, while the steel in the beam handles tension. These cohesive units, known as flanged beams, come in various configurations such as T or L beams, depending on whether the slab is present on one or both sides of the beam.
+
 ![*flangedBeam1*](images/flangedBeam1.png)
 
 ## Effective with of flange
 
 Regarding the effective width of the flange, in the absence of more precise calculations, it may be approximated as follows, However, the effective width of the flange should not exceed the breadth of the web plus half the sum of the clear distances to the adjacent beams on either side.
+
 ![*formula*](images/formula.png)
 
 ## Basis of design and analysis 
