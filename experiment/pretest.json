@@ -44,10 +44,10 @@
 	{
       "question": "In Case 2 of T beam analysis, where the neutral axis is positioned below the flange and the flange thickness is sufficiently small, what is the maximum stress value reached within the concrete slab?",
       "answers": {
-        "a": "0.001fck  ",
-        "b": "0.002fck  ",
-        "c": "0.003fck  ",
-        "d": "0.004fck"
+        "a": "0.001f<sub>ck</sub>  ",
+        "b": "0.002f<sub>ck</sub>  ",
+        "c": "0.003f<sub>ck</sub>  ",
+        "d": "0.004f<sub>ck</sub> "
       },
      
       "correctAnswer": "b",
