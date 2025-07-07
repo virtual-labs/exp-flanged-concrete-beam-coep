@@ -54,10 +54,10 @@
 	{
       "question": "In Case 3 of T beam analysis, where the neutral axis lies beneath the flange and the strain at the bottom of the slab remains below 0.002, what condition leads to non-linear stress distribution within the flange?",
       "answers": {
-        "a": "Df/d ratio exceeding 0.1  ",
-        "b": "Df/d ratio exceeding 0.2  ",
-        "c": "Df/d ratio less than 0.1  ",
-        "d": "Df/d ratio less than 0.2 "
+        "a": "D<sub>f</sub>/d ratio exceeding 0.1  ",
+        "b": "D<sub>f</sub>/d ratio exceeding 0.2  ",
+        "c": "D<sub>f</sub>/d ratio less than 0.1  ",
+        "d": "D<sub>f</sub>/d ratio less than 0.2 "
       },
      
       "correctAnswer": "b",

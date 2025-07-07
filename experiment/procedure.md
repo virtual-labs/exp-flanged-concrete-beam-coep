@@ -1,26 +1,40 @@
 
+# PROCEDURE SECTION
 
-#### Procedure
+## Configuration
 
-### Configuration :
+- Enter the **width of supports** `w1` and `w2` within the range of **0.23 m to 2 m**.
+- Enter the **nominal cover** in the range of **20 mm to 70 mm**.
+- Click on the **“Configure”** button and then proceed to the next step by clicking the **“Next”** button.
 
-- Configure the parameters to Design a singly reinforced beam
-- Width of support w1 and w2 ranges between 0.23 to 2 (m). Also nomial cover ranges between 20 to 70 (mm)
-- Click the "Configure" button, then click the "Next" arrow to proceed to the next level
+## Configure T Beam Parameters
 
-### Configure  T-beam :
+- Enter the following parameters:
+  - **Width of web (bw)**
+  - **Depth of flange (Df)**
+  - **Span Length (L)**
+- Calculate the **width of flange (bf)** using the following formulas: <br>
+ For T beams: bf = (l<sub>o</sub> / 6)+ bw + 6Df <br>
+For L beams: bf = (l<sub>o</sub> / 12) + bw + 3Df <br>
+Where, l<sub>o</sub> = distance between points of zero moments in the beam
+- After **3 incorrect attempts**, the correct value and formula will be displayed.
+- Calculate the **dead load** and **live load**, and verify the answer.
+- Click the **"Submit"** button and then click the **"Next"** arrow to proceed to the next level.
 
-- Configure the parameters required to design T-beam
-- Calculate the value of bf. Verify your answer. After three incorrect attempts, the formula and correct answer will be provided
-- Calculate the self-weight of Dead Load (D.L.) and verify your answer (kN/m). Similarly, calculate the Live Load (L.L.) in kN/m and verify your answer
-- Click the "Submit" button, then click the "Next" arrow to proceed to the next level 
+## Calculations
 
-### Calculations : 
+- Calculate the following: <br>
+Effective cover = Nominal cover + (bar diameter) / 2 <br>
+Effective span = Centre to centre distance between the supports <br>
+Factored load = 1.5 × (Dead Load + Live Load) <br>
+Bending moment = (wL<sup>2</sup>) / 8 <br>
+Shear force = (wL) / 2
+- Click **“Next”** to proceed after verifying each value.
 
-- Calculate effective cover, factored load, effective span, shear force and bending moment.
-- Click on Next Arrow for next level after calculation.
+## Overall Depth vs Ast Graph with Calculations
 
-### OverAll Depth Vs ASt Graph with Calculations :
+- Calculate the required **effective depth** for a balanced section and provide the **overall depth (D)**.
+- Similarly, calculate the **Ast** for the balanced section.
+- Select various values of **overall depth (D)** in **mm**.
+- After submitting multiple depths, click the **“Plot Graph”** button to observe how **Ast** varies with **D**.
 
-- Calculate the required effective depth for a balanced section and provide the overall depth (D). Similarly, calculate the AST for the balanced section
-- Select different values of total depth (D) in mm, submit them, then click the 'Plot Graph' button to observe the graph
