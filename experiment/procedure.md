@@ -1,5 +1,5 @@
 
-# PROCEDURE SECTION
+## Procedure 
 
 ## Configuration
 
