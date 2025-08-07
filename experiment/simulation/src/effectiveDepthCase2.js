@@ -456,8 +456,22 @@ $("#tuValues").click(function(){
 
                     $("#submit_load9").prop("disabled",true);
                     $("#text9").prop("disabled",true);
-             $("#forwardButton").removeClass("disabled");
+             $("#forwardButton").addClass("disabled");
              $('#backwardButton').removeClass("disabled");
+			 
+			   Swal.fire({
+        icon: 'success',
+        title: 'Experiment Completed!',
+        confirmButtonText: 'Ok',
+        customClass: {
+          icon: 'custom-icon',
+          popup: 'custom-popup',
+          title: 'custom-title',
+          confirmButton: 'custom-confirm-button',
+          cancelButton: 'custom-cancel-button',
+        }
+      });
+			 
  
 				} else if (tuEnter != tu) {
 				  $(".modal-header").html("Error Message");
@@ -481,10 +495,23 @@ $("#tuValues").click(function(){
 	
 				if (tuEnter == tu) {
 					 
-              $("#submit_load9").prop("disabled",true);
+             $("#submit_load9").prop("disabled",true);
                     $("#text9").prop("disabled",true);
-                     $("#forwardButton").removeClass("disabled");
+             $("#forwardButton").addClass("disabled");
              $('#backwardButton').removeClass("disabled");
+			 
+			   Swal.fire({
+        icon: 'success',
+        title: 'Experiment Completed!',
+        confirmButtonText: 'Ok',
+        customClass: {
+          icon: 'custom-icon',
+          popup: 'custom-popup',
+          title: 'custom-title',
+          confirmButton: 'custom-confirm-button',
+          cancelButton: 'custom-cancel-button',
+        }
+      });
             } else {
 					
 			$("#btnModal").removeClass("btn-danger").addClass("btn-success");
