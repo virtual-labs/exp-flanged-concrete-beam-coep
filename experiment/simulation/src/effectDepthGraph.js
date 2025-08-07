@@ -608,6 +608,8 @@ $("#MsgModal").html(modelImg1);
 		
 		
 		 var ast1;
+		 var finishCnt = 1;
+		 
 		$("#submit_load10").click(function(){	
 			ast1 = parseInt(ast)+1000;		
 			 $("#selectD").prop("disabled",false);
@@ -629,7 +631,28 @@ $("#MsgModal").html(modelImg1);
 //							 console.log(graphJson);
 							 $("#page4Div2").html('');
 							 graphCreate(graphJson);
+							 	$('#forwardButton').addClass("disabled");
+                                 $('#backwardButton').removeClass("disabled");
+							 
 			     $("#selectD").val(0);
+		
+     if(finishCnt == 1){		
+				Swal.fire({
+        icon: 'success',
+        title: 'Perform trials with different total depth (D) values. <br>The experiment is now complete!',
+        confirmButtonText: 'Ok',
+        customClass: {
+          icon: 'custom-icon',
+          popup: 'custom-popup',
+          title: 'custom-title',
+          confirmButton: 'custom-confirm-button',
+          cancelButton: 'custom-cancel-button',
+        }
+      });
+
+     
+	  finishCnt++;
+	 }			 
 //							 graphJson = {};
 //arrGraphStore = [];
 //            $("#page1,#page2,#page3").prop("hidden",true);

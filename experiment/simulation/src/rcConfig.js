@@ -19,6 +19,8 @@ var steelStr;
 var initFlag = false;
 
 
+
+
 var htm=''
 	htm+='<div class="row">'	
 	+'<div class="col-sm-6">'
