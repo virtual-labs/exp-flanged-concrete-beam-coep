@@ -62,6 +62,19 @@
      
       "correctAnswer": "b",
       "difficulty": "beginner"
+    },
+
+	{
+      "question": "In an inverted T-beam, which is true?",
+      "answers": {
+        "a": "Web at bottom, flange at top ",
+        "b": "Web at top, flange at bottom",
+        "c": "DSlab cast separately",
+        "d": "Used only in bridges "
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
     }
 	
 

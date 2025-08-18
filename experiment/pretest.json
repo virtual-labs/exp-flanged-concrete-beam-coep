@@ -66,6 +66,20 @@
      
       "correctAnswer": "b",
       "difficulty": "beginner"
+    },
+
+	
+	{
+      "question": "When $D_f > 0.2d$ and NA lies in the web:",
+      "answers": {
+        "a": "Flange fully stressed ",
+        "b": "Flange partially stressed  ",
+        "c": "No compression in flange ",
+        "d": "Stress distribution uniform"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
     }
   
   ]
