@@ -1,16 +1,16 @@
 ## Theory 
 
-## Introduction:
+#### Introduction:
 
 In scenarios where a reinforced concrete slab sits atop a reinforced concrete beam, there's an opportunity to design and construct them to function together synergistically. By strategically distributing forces, the concrete slab can bear compression, while the steel in the beam handles tension. These cohesive units, known as flanged beams, come in various configurations such as T or L beams, depending on whether the slab is present on one or both sides of the beam.
 
-## Effective width of flange
+#### Effective width of flange
 
 Regarding the effective width of the flange, in the absence of more precise calculations, it may be approximated as follows, However, the effective width of the flange should not exceed the breadth of the web plus half the sum of the clear distances to the adjacent beams on either side.
 
 ![*formula*](images/formula.png)
 
-## Basis of design and analysis 
+#### Basis of design and analysis 
 
 The foundational principles applied in the design of rectangular beams can also be extended to T beams. These principles, such as the assumption of maintaining plane sections after bending and the concrete strain reaching a specific threshold for failure, remain valid for T beams as well. However, the primary challenge often encountered with T beams lies in determining the necessary reinforcement to withstand a given moment. Typically, the full capacity of the T beam's concrete section isn't fully utilized during failure, leading to varying positions of the neutral axis relative to the top slab depending on the required moment resistance. The neutral axis determines the stress block and reinforcement area. Position of neutral axis is critical in flanged beams and leads to three distinct design cases.
 
@@ -29,7 +29,7 @@ insufficient strain. The moment of resistance of the section may be calculated a
 
 ![*mu2*](images/mu2.png)
 
-## Inverted T beam
+#### Inverted T beam
 
 An inverted T beam is a type of flanged reinforced beam where the web is on top and the flange (usually the slab) is at bottom. The design principles remain same where the flange thickness is the same as slab thickness. These beams are commonly used in precast structures.
 
