@@ -1,0 +1,205 @@
+.iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+.selectConf{
+	
+     height: auto;
+/*     background-color: #3e5064; */
+/*     color: #fff; */
+    font-size: 18px;
+}
+.panelHeadingBold{
+	font-size:21px;
+}
+.labelstyle
+{
+	font-size:17px;
+}
+
+.btnDesign{
+	    color: #fff;
+    background-color: #5c6872;
+    border-color: #212529;
+}
+
+.highlight {
+      color: red;
+      font-weight: bold;
+    }
+
+.spanMsg {
+	background-color: #c9d3ac;
+    color: #0a0e11;
+    margin: 5px;
+    padding: 1px;
+/*     padding: 10px 5px; */
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+    padding-left: 10px; /* Add padding to shift the text */
+}
+
+#msgBox{
+/* 	background-color:red; */
+	margin:20px;
+	font-size:20px;
+}
+.marginBottom{
+	margin-bottom:15px;
+}
+.validMaterialMsgStyle{
+	color: #fff;
+    font-size: 19px;
+    padding: 10px;
+}
+hr.new3 {
+  border-top: 10px dotted red;
+}
+#procedure{
+	padding: 5px;
+    margin-top: 5px;
+    margin-bottom: -50px;
+    font-size: 15px;
+}  
+
+.fafaInfoGreen{
+font-size: 24px;
+    padding: 3px;
+    color: green;
+    cursor: pointer;
+}
+
+.fafaInfoRed{
+font-size: 24px;
+    padding: 3px;
+    color: red;
+    cursor: pointer;
+}
+
+
+
+.fafaInfoValues{
+font-size: 24px;
+    padding: 3px;
+    color: #3c1c1c;
+    cursor: pointer;
+}
+
+
+
+#labelSelected,#shearFactor,#factorLoad,#bendingMoment,#shearFactorReaction,#effectiveDepth,#effectiveSpan,#diaBar,#diaFors,#clearC
+,#overAllDepth,#astBlock,#eCover,#factoredLoad,#shearF,#bendingM,#overAllDepthSelect,#calculatedAst,#overAllDepthSelectSecond,#steelGrade2,#inputsteelRate
+,#concreteGrade2,#inputconcreteRate,#overAllDepthSelect1,#calculatedAst1,#noOfBars,#sizeOfBars,#barNos,#sForceCritical,#sForceStress,#sForceStrength,#sMaxShearStress
+,#deffCalculate1,#condition1,#steelGradeStirrups,#steelGradeStirrups3,#vcCalculate,#condition2,#xValCal,#yfCalculate,#cuCalculate,#astCal,#tuValCal
+{
+			background-color:#7dafad80;
+/* 			#b4e4e280; */
+			color:#000;
+			
+/* 			padding:5px 20px 5px 5px; */
+			margin: 2px;
+			border-radius: 10px;
+			border: 1px solid #0e9bbc;
+/* 			border-block-color: #000; */
+/* 			border-radius: 10px; */
+}
+
+#nomCover,#spanLabel,#longReinLabel,#shearLabel,#w1Label,#w2Label,#steelGradeLabel,#widthLabel,#bendLabel,#concreteGradeLabel,#longLabel,#shearLabel,#nominalCLabel{
+	background-color:#bbc8d4e6;
+			color:#080808;		
+			margin-left:20px;
+}
+
+#calVoltage{
+	background-color: #072647;
+			color:#fff;
+			padding:5px 20px 5px 5px;
+			margin: 5px;
+}
+
+
+#concreteLabel,#steelLabel{
+    padding: 4px;
+    text-align: center;
+}
+	
+#testSubmit
+{
+	padding: 10px;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 10px;
+	background-color: #212529;
+	margin: 20px 10px;;
+	letter-spacing: 1px;
+	font-weight: bold;
+/* 	box-shadow: 0 5px #999; */
+}
+#questionDiv .queno
+{ 
+	background-color: #1d2b37;
+    padding: 8px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: Cambria, Georgia, serif;
+ }
+ 
+ #testSubmit,#nextLevelConfig
+{
+	padding: 10px;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 10px;
+	background-color: #212529;
+	margin: 20px 10px;;
+	letter-spacing: 1px;
+	font-weight: bold;
+/* 	box-shadow: 0 5px #999; */
+}
+.nextLevelBtn {
+	padding: 10px;
+    border-radius: 10px;
+    background-color: #212529;
+    color: #fff;
+    margin: 20px 10px;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.panel-primary>.panel-heading,.card-header,.modal-header {
+background-color:#45898680;
+/* #93e4e180; */
+/* #b4e4e280; */
+/* #26535a; */
+	color:#000;
+/* 	border-color:blue;	 */
+	font-weight: bold;
+}	
+.boldTextBlue{
+	color:Blue;
+	letter-spacing: 0px;
+	font-size: 18px;
+}
+.boldTextRed{
+	color:Red;
+	letter-spacing: 0px;
+	font-size: 18px;
+}
+.boldTextGreen{
+	color:green;
+	letter-spacing: 0px;
+	font-size: 18px;
+}
+.model
+{
+	padding:0px;
+}  
+.errorMsgf
+{
+	
+}
+#alertMsgBox{
+	margin-top:25px;
+}

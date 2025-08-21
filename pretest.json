@@ -1,0 +1,86 @@
+{
+  "version": 2.0,
+  "questions": [
+ 
+	 {
+      "question": "In T beam design, when the neutral axis resides within the flange (Case 1), how is the T beam typically analyzed?",
+      "answers": {
+        "a": "As a circular beam  ",
+        "b": "As a trapezoidal beam  ",
+        "c": "As a rectangular beam  ",
+        "d": "As a triangular beam"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the primary function of steel in a flanged beam configuration?",
+      "answers": {
+        "a": "Handling compression forces ",
+        "b": "Distributing shear forces ",
+        "c": "Bearing tension forces  ",
+        "d": "Providing insulation properties "
+   
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In continuous T or L beams, where does flanged beam behavior primarily occur?",
+      "answers": {
+        "a": "Between supports  ",
+        "b": "Over the supports  ",
+        "c": "At the mid-span  ",
+        "d": "Along the entire length  "
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	
+	
+	{
+      "question": "In Case 2 of T beam analysis, where the neutral axis is positioned below the flange and the flange thickness is sufficiently small, what is the maximum stress value reached within the concrete slab?",
+      "answers": {
+        "a": "0.001f<sub>ck</sub>  ",
+        "b": "0.002f<sub>ck</sub>  ",
+        "c": "0.003f<sub>ck</sub>  ",
+        "d": "0.004f<sub>ck</sub> "
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+	
+	{
+      "question": "What is the purpose of positioning transverse steel atop the slab in continuous T or L beams?",
+      "answers": {
+        "a": "To handle compression forces  ",
+        "b": "To mitigate shear stresses  ",
+        "c": "To increase beam flexibility  ",
+        "d": "To decrease slab thickness  "
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+	
+	{
+      "question": "When $D_f > 0.2d$ and NA lies in the web:",
+      "answers": {
+        "a": "Flange fully stressed ",
+        "b": "Flange partially stressed  ",
+        "c": "No compression in flange ",
+        "d": "Stress distribution uniform"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  
+  ]
+}

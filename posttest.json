@@ -1,0 +1,83 @@
+
+ {
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Which of the following is a requirement for a slab intended to serve as the compression flange of a T-beam or L-beam?",
+      "answers": {
+         "a": "The slab should be detached from the web ",
+        "b": "The slab must be cast together with the web or securely bonded to it ",
+        "c": "The slab should have minimal reinforcement  ",
+        "d": "The slab must have a separate support system "
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "When the primary reinforcement of the slab runs parallel to the beam in a T-beam or L-beam configuration, what percentage of additional transverse reinforcement is typically required?",
+      "answers": {
+        "a": "20%  ",
+        "b": "40%  ",
+        "c": "60%  ",
+        "d": "80% "
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	   {
+      "question": "In a flanged beam system where a reinforced concrete slab sits atop a reinforced concrete beam, which component primarily bears compression forces?",
+      "answers": {
+         "a": "Reinforced concrete beam",
+        "b": "Reinforced concrete slab",
+        "c": "Steel in the beam",
+        "d": "None of the above"
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "In which part of the continuous T or L beams do slabs primarily experience tension forces?",
+      "answers": {
+        "a": "Between supports  ",
+        "b": "Over the supports  ",
+        "c": "At the mid-span  ",
+        "d": "Along the entire length  "
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+	{
+      "question": "In Case 3 of T beam analysis, where the neutral axis lies beneath the flange and the strain at the bottom of the slab remains below 0.002, what condition leads to non-linear stress distribution within the flange?",
+      "answers": {
+        "a": "D<sub>f</sub>/d ratio exceeding 0.1  ",
+        "b": "D<sub>f</sub>/d ratio exceeding 0.2  ",
+        "c": "D<sub>f</sub>/d ratio less than 0.1  ",
+        "d": "D<sub>f</sub>/d ratio less than 0.2 "
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+	{
+      "question": "In an inverted T-beam, which is true?",
+      "answers": {
+        "a": "Web at bottom, flange at top ",
+        "b": "Web at top, flange at bottom",
+        "c": "DSlab cast separately",
+        "d": "Used only in bridges "
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+	
+
+  
+  ]
+}
