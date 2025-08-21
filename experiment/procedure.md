@@ -1,13 +1,13 @@
 
-## Procedure 
+## PROCEDURE 
 
-## Configuration
+### Configuration
 
 - Enter the **width of supports** `w1` and `w2` within the range of **0.23 m to 2 m**.
 - Enter the **nominal cover** in the range of **20 mm to 70 mm**.
 - Click on the **“Configure”** button and then proceed to the next step by clicking the **“Next”** button.
 
-## Configure T Beam Parameters
+### Configure T Beam Parameters
 
 - Enter the following parameters:
   - **Width of web (bw)**
@@ -21,7 +21,7 @@ Where, l<sub>o</sub> = distance between points of zero moments in the beam
 - Calculate the **dead load** and **live load**, and verify the answer.
 - Click the **"Submit"** button and then click the **"Next"** arrow to proceed to the next level.
 
-## Calculations
+### Calculations
 
 - Calculate the following: <br>
 Effective cover = Nominal cover + (bar diameter) / 2 <br>
@@ -31,7 +31,7 @@ Bending moment = (wL<sup>2</sup>) / 8 <br>
 Shear force = (wL) / 2
 - Click **“Next”** to proceed after verifying each value.
 
-## Overall Depth vs Ast Graph with Calculations
+### Overall Depth vs Ast Graph with Calculations
 
 - Calculate the required **effective depth** for a balanced section and provide the **overall depth (D)**.
 - Similarly, calculate the **Ast** for the balanced section.

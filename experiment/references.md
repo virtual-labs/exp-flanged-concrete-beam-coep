@@ -1,4 +1,4 @@
-### References
+## References
 
 - Limit State Design of Reinforced Concrete - P.C.Varghese Prentice - Hall of India
 - For clauses refer - IS code 456:2000, SP-16 Handbook.
